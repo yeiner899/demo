@@ -1,0 +1,263 @@
+"Screen_detalle_5 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fPlantillaPDF - Caracterización Voz 21072021.pdf")
+        ;Set(_verBotonBlanco1,false);Set(_verBotonBlanco2,true);Set(_verBotonBlanco3,true);Set(_verBotonBlanco4,true)
+        ;Set(_verBotonRojo1,true);Set(_verBotonRojo2,false);Set(_verBotonRojo3,false);Set(_verBotonRojo4,false)
+    Width: =1440
+
+    URL_pdf_8 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =221
+        ZIndex: =1
+
+    Rectangle1_11 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =620
+        Width: =189
+        Y: =80
+        ZIndex: =2
+
+    Button2_106 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: |-
+            =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fPlantillaPDF - Caracterización Voz 22072021.pdf")
+            ;Set(_verBotonBlanco1,false);Set(_verBotonBlanco2,true);Set(_verBotonBlanco3,true);Set(_verBotonBlanco4,true)
+            ;Set(_verBotonRojo1,true);Set(_verBotonRojo2,false);Set(_verBotonRojo3,false);Set(_verBotonRojo4,false)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =11
+        Text: ="Caracterización del Servicio"
+        Visible: =_verBotonBlanco1
+        Width: =150
+        X: =19
+        Y: =191
+        ZIndex: =3
+
+    Button2_108 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: |-
+            =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fPlantillaPDF - Catálogo Técnico Voz 22072021.pdf")
+            ;Set(_verBotonBlanco1,true);Set(_verBotonBlanco2,false);Set(_verBotonBlanco3,true);Set(_verBotonBlanco4,true)
+            ;Set(_verBotonRojo1,false);Set(_verBotonRojo2,true);Set(_verBotonRojo3,false);Set(_verBotonRojo4,false)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Catálogo Técnico"
+        Visible: =_verBotonBlanco2
+        Width: =150
+        X: =19
+        Y: =242
+        ZIndex: =4
+
+    Icon5_13 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =25
+        X: =1412
+        Y: =70
+        ZIndex: =8
+
+    Icon6_15 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_TRES_1)
+        Tooltip: ="Regresar"
+        Width: =21
+        X: =1412
+        Y: =114
+        ZIndex: =9
+
+    PdfViewer1_8 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_8.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =700
+        ShowControls: =true
+        Width: =1214
+        X: =189
+        ZIndex: =11
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_8 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =153
+        X: =6
+        Y: =7
+        ZIndex: =12
+
+    Image25_8 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =13
+
+    Button2_107 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =11
+        Text: ="Caracterización del Servicio"
+        Visible: =_verBotonRojo1
+        Width: =150
+        X: =19
+        Y: =191
+        ZIndex: =20
+
+    Group2_8 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =20
+
+        Image15_11 As image:
+            Height: =42
+            Image: ='Recurso 28'
+            Width: =30
+            X: =8
+            Y: =116
+            ZIndex: =17
+
+        Label6_13 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =28
+            Size: =14
+            Text: ="AUTOSERVICIO"
+            Width: =159
+            X: =38
+            Y: =133
+            ZIndex: =18
+
+        Label11_11 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(68, 68, 68, 1)
+            Height: =24
+            Size: =12
+            Text: ="VOZ &"
+            Width: =72
+            X: =39
+            Y: =116
+            ZIndex: =19
+
+    Button2_109 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Catálogo Técnico"
+        Visible: =_verBotonRojo2
+        Width: =150
+        X: =19
+        Y: =242
+        ZIndex: =21
+
+    Button2_111 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Gestión de Configuración"
+        Visible: =_verBotonRojo3
+        Width: =150
+        X: =19
+        Y: =293
+        ZIndex: =22
+
+    Image10_6 As image:
+        Height: =26
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =26
+        X: =1410
+        Y: =154
+        ZIndex: =23
+

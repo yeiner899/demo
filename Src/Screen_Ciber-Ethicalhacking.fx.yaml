@@ -1,0 +1,491 @@
+"'Screen_Ciber-Ethicalhacking' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |
+        =Set(
+            _URLpdf,
+            "Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fSEGURIDAD_OFENSIVA%252fETHICAL_HACKING%252fEthicalHacking_Caracterizacion_Servicio.pdf"
+        );
+        Set(
+            _verBotonBlancoEthical1,
+            false
+        );
+        Set(
+            _verBotonBlancoEthical2,
+            true
+        );
+        Set(
+            _verBotonBlancoEthical3,
+            true
+        );
+        Set(
+            _verBotonBlancoEthical4,
+            true
+        );
+        Set(
+            _verBotonBlancoEthical5,
+            true
+        );
+        Set(
+            _verBotonRojoEthical1,
+            true
+        );
+        Set(
+            _verBotonRojoEthical2,
+            false
+        );
+        Set(
+            _verBotonRojoEthical3,
+            false
+        );
+        Set(
+            _verBotonRojoEthical4,
+            false
+        );
+        Set(
+            _verBotonRojoEthical5,
+            false
+        )
+    Width: =1440
+
+    URL_pdf_26 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =221
+        ZIndex: =1
+
+    Rectangle1_37 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =620
+        Width: =189
+        Y: =80
+        ZIndex: =2
+
+    Icon5_39 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =25
+        X: =1412
+        Y: =70
+        ZIndex: =8
+
+    Icon6_41 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_CIBERSEGURIDAD,CoverRight)
+        Tooltip: ="Regresar"
+        Width: =21
+        X: =1412
+        Y: =114
+        ZIndex: =9
+
+    PdfViewer1_26 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_26.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =700
+        ShowControls: =true
+        Width: =1214
+        X: =189
+        ZIndex: =11
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_26 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =153
+        X: =6
+        Y: =7
+        ZIndex: =12
+
+    Image25_26 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =13
+
+    Image10_32 As image:
+        Height: =26
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =26
+        X: =1410
+        Y: =154
+        ZIndex: =23
+
+    Label6_55 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =66
+        Size: =19
+        Text: ="CIBER SEGURIDAD"
+        Width: =178
+        X: =6
+        Y: =99
+        ZIndex: =26
+
+    botonesBlancosEthicalhac As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =31
+
+        ButtonBlanco1_2_129 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |
+                =Set(
+                    _URLpdf,
+                    "Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fSEGURIDAD_OFENSIVA%252fETHICAL_HACKING%252fEthicalHacking_Caracterizacion_Servicio.pdf"
+                );
+                Set(
+                    _verBotonBlancoEthical1,
+                    false
+                );
+                Set(
+                    _verBotonBlancoEthical2,
+                    true
+                );
+                Set(
+                    _verBotonBlancoEthical3,
+                    true
+                );
+                Set(
+                    _verBotonBlancoEthical4,
+                    true
+                );
+                Set(
+                    _verBotonBlancoEthical5,
+                    true
+                );
+                Set(
+                    _verBotonRojoEthical1,
+                    true
+                );
+                Set(
+                    _verBotonRojoEthical2,
+                    false
+                );
+                Set(
+                    _verBotonRojoEthical3,
+                    false
+                );
+                Set(
+                    _verBotonRojoEthical4,
+                    false
+                );
+                Set(
+                    _verBotonRojoEthical5,
+                    false
+                )
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonBlancoEthical1
+            Width: =150
+            X: =18
+            Y: =232
+            ZIndex: =3
+
+        ButtonBlanco2_2_131 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf")
+                ;Set(_verBotonBlancoEthical1,true);Set(_verBotonBlancoEthical2,false);Set(_verBotonBlancoEthical3,true);Set(_verBotonBlancoEthical4,true);Set(_verBotonBlancoEthical5,true)
+                ;Set(_verBotonRojoEthical1,false);Set(_verBotonRojoEthical2,true);Set(_verBotonRojoEthical3,false);Set(_verBotonRojoEthical4,false);Set(_verBotonRojoEthical5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonBlancoEthical2
+            Width: =150
+            X: =18
+            Y: =286
+            ZIndex: =4
+
+        ButtonBlanco4_2_188 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fSEGURIDAD_OFENSIVA%252fETHICAL_HACKING%252fEthicalHacking_Modelo_Operacion.pdf");Set(_verBotonBlancoEthical1, true );Set(_verBotonBlancoEthical2, true );Set(_verBotonBlancoEthical3, true );Set(_verBotonBlancoEthicalEthical4, false );Set(_verBotonBlancoEthical5,true)
+                ;Set(_verBotonRojoEthical1, false );Set(_verBotonRojoEthical2, false );Set(_verBotonRojoEthical3, false );Set(_verBotonRojoEthical4, true );Set(_verBotonRojoEthical5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo Operación Servicio"
+            Visible: =_verBotonBlancoEthical4
+            Width: =150
+            X: =18
+            Y: =394
+            ZIndex: =27
+
+        ButtonBlanco5_2_181 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fSEGURIDAD_OFENSIVA%252fETHICAL_HACKING%252fEthicalHacking_Modelo_Costos.pdf")
+                ;Set(_verBotonBlancoEthical1,true);Set(_verBotonBlancoEthical2,true);Set(_verBotonBlancoEthical3,true);Set(_verBotonBlancoEthical4,true);Set(_verBotonBlancoEthical5,false)
+                ;Set(_verBotonRojoEthical1,false);Set(_verBotonRojoEthical2,false);Set(_verBotonRojoEthical3,false);Set(_verBotonRojoEthical4,false);Set(_verBotonRojoEthical5,true)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonBlancoEthical5
+            Width: =150
+            X: =18
+            Y: =448
+            ZIndex: =29
+
+        ButtonBlanco4_2_187 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf");
+                Set(_verBotonBlancoEthical1, true );Set(_verBotonBlancoEthical2, true );Set(_verBotonBlancoEthical3, false );Set(_verBotonBlancoEthical4, true );Set(_verBotonBlancoEthical5,true)
+                ;Set(_verBotonRojoEthical1, false );Set(_verBotonRojoEthical2, false );Set(_verBotonRojoEthical3, true );Set(_verBotonRojoEthical4, false );Set(_verBotonRojoEthical5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestión de la Configuración"
+            Visible: =_verBotonBlancoEthical3
+            Width: =150
+            X: =18
+            Y: =340
+            ZIndex: =30
+
+    Label6_57 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =104
+        Size: =14
+        Text: ="ETHICAL HACKING"
+        Width: =166
+        X: =1
+        Y: =140
+        ZIndex: =32
+
+    botonesRojosEthicalhac As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =32
+
+        ButtonRojo1_2_130 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonRojoEthical1
+            Width: =150
+            X: =18
+            Y: =232
+            ZIndex: =20
+
+        ButtonRojo2_152 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonRojoEthical2
+            Width: =150
+            X: =18
+            Y: =286
+            ZIndex: =21
+
+        ButtonRojo2_154 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo Operación Servicio"
+            Visible: =_verBotonRojoEthical4
+            Width: =150
+            X: =18
+            Y: =394
+            ZIndex: =22
+
+        ButtonRojo2_155 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modeo de Costos"
+            Visible: =_verBotonRojoEthical5
+            Width: =150
+            X: =18
+            Y: =448
+            ZIndex: =24
+
+        ButtonRojo2_153 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestion de la Configuración"
+            Visible: =_verBotonRojoEthical3
+            Width: =150
+            X: =18
+            Y: =340
+            ZIndex: =31
+

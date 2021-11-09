@@ -1,0 +1,48 @@
+"prueba_PDF As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =500
+    Width: =1000
+
+    RectQuickActionBar4 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName4 As label:
+        Align: =Align.Center
+        Height: =88
+        Size: =27
+        Text: ="[Título]"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Button3 As button:
+        Height: =32
+        Size: =12
+        Text: ="Botón A"
+        Width: =142
+        X: =28
+        Y: =176
+        ZIndex: =3
+
+    Button4 As button:
+        Height: =30
+        Size: =12
+        Text: ="Botón B"
+        Width: =142
+        X: =28
+        Y: =255
+        ZIndex: =4
+
+    HtmlText1 As htmlViewer:
+        Height: =228
+        HtmlText: |-
+            ="<b>Hola Portafolio</b>
+            <br>
+            Show your <b><font color=blue>HTML</font></b> text here.
+            <img src=""https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8peeAQ8Jbw4lowjdYM9OYVJFJr8EwgGNTsJ6BtbqPdNHWz2m""
+            alt=""Testing"" width=""500"" height=""100"">"
+        Width: =498
+        X: =273
+        Y: =138
+        ZIndex: =5
+

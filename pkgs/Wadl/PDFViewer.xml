@@ -1,0 +1,46 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://msmanaged-na.azure-apim.net/apim/logicflows" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="PDFViewer" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="PDF Viewer" />
+  <grammars>
+    <jsonTypes targetNamespace="https://msmanaged-na.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="ManualTriggerInput_varhomesharepoint_Valor_def" />
+      <string name="ManualTriggerInput_varpathsharepoint_Valor_def" />
+      <object name="ManualTriggerInput">
+        <property name="varhomesharepoint_Valor" type="string" />
+        <property name="varpathsharepoint_Valor" type="string" />
+      </object>
+      <base64Binary name="ResponseActionOutput_pdf_viewer_def" />
+      <object name="ResponseActionOutput">
+        <property name="pdf_viewer" typeRef="ResponseActionOutput_pdf_viewer_def" />
+      </object>
+      <object name="Run_responses_default_def" />
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://msmanaged-na.azure-apim.net/apim/logicflows">
+    <resource path="/{connectionId}/triggers/manual/run">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="Run">
+        <doc title="Runs a logic flow trigger." />
+        <request>
+          <param style="query" name="api-version" type="xs:string" required="true" fixed="2015-02-01-preview">
+            <doc title="The api version" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="varhomesharepoint_Valor" path="/varhomesharepoint_Valor" type="xs:string" required="true" />
+            <param style="plain" name="varpathsharepoint_Valor" path="/varpathsharepoint_Valor" type="xs:string" required="true" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:ResponseActionOutput" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="logicflows" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

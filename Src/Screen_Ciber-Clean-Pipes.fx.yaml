@@ -1,0 +1,418 @@
+"'Screen_Ciber-Clean-Pipes' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fCLEAN_PIPES_ANTIDDOS%252fCaracterizacion_Servicio_CleanPipes_AntiDDoS.pdf")
+        ;Set(_verBotonBlancoCleanP1,false);Set(_verBotonBlancoCleanP2,true);Set(_verBotonBlancoCleanP3,true);Set(_verBotonBlancoCleanP4,true);Set(_verBotonBlancoCleanP5,true)
+        ;Set(_verBotonRojoCleanP1,true);Set(_verBotonRojoCleanP2,false);Set(_verBotonRojoCleanP3,false);Set(_verBotonRojoCleanP4,false);Set(_verBotonRojoCleanP5,false)
+    Width: =1440
+
+    URL_pdf_24 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =221
+        ZIndex: =1
+
+    Rectangle1_35 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =620
+        Width: =189
+        Y: =80
+        ZIndex: =2
+
+    Icon5_37 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =25
+        X: =1412
+        Y: =70
+        ZIndex: =8
+
+    Icon6_39 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_CIBERSEGURIDAD,CoverRight)
+        Tooltip: ="Regresar"
+        Width: =21
+        X: =1412
+        Y: =114
+        ZIndex: =9
+
+    PdfViewer1_24 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_24.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =700
+        ShowControls: =true
+        Width: =1214
+        X: =189
+        ZIndex: =11
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_24 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =153
+        X: =6
+        Y: =7
+        ZIndex: =12
+
+    Image25_24 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =13
+
+    Label6_52 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =21
+        Size: =14
+        Text: ="CLEAN-PIPES"
+        Width: =178
+        X: =18
+        Y: =169
+        ZIndex: =18
+
+    Image10_30 As image:
+        Height: =26
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =26
+        X: =1410
+        Y: =154
+        ZIndex: =23
+
+    Label6_51 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =66
+        Size: =19
+        Text: ="CIBER SEGURIDAD"
+        Width: =178
+        X: =6
+        Y: =99
+        ZIndex: =26
+
+    botonesBlancosCleanPipes As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =31
+
+        ButtonBlanco1_2_127 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fCLEAN_PIPES_ANTIDDOS%252fCaracterizacion_Servicio_CleanPipes_AntiDDoS.pdf")
+                ;Set(_verBotonBlancoCleanP1,false);Set(_verBotonBlancoCleanP2,true);Set(_verBotonBlancoCleanP3,true);Set(_verBotonBlancoCleanP4,true);Set(_verBotonBlancoCleanP5,true)
+                ;Set(_verBotonRojoCleanP1,true);Set(_verBotonRojoCleanP2,false);Set(_verBotonRojoCleanP3,false);Set(_verBotonRojoCleanP4,false);Set(_verBotonRojoCleanP5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonBlancoCleanP1
+            Width: =150
+            X: =18
+            Y: =311
+            ZIndex: =3
+
+        ButtonBlanco2_2_129 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fCLEAN_PIPES_ANTIDDOS%252fCatalogo_Tecnico_CleanPipes _AntiDDoS.pdf")
+                ;Set(_verBotonBlancoCleanP1,true);Set(_verBotonBlancoCleanP2,false);Set(_verBotonBlancoCleanP3,true);Set(_verBotonBlancoCleanP4,true);Set(_verBotonBlancoCleanP5,true)
+                ;Set(_verBotonRojoCleanP1,false);Set(_verBotonRojoCleanP2,true);Set(_verBotonRojoCleanP3,false);Set(_verBotonRojoCleanP4,false);Set(_verBotonRojoCleanP5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonBlancoCleanP2
+            Width: =150
+            X: =18
+            Y: =365
+            ZIndex: =4
+
+        ButtonBlanco4_2_184 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fCLEAN_PIPES_ANTIDDOS%252fModelo_Operacion_ServicioCleanPipes_AntiDDoS.pdf");Set(_verBotonBlancoCleanP1, true );Set(_verBotonBlancoCleanP2, true );Set(_verBotonBlancoCleanP3, true );Set(_verBotonBlancoCleanPCleanP4, false );Set(_verBotonBlancoCleanP5,true)
+                ;Set(_verBotonRojoCleanP1, false );Set(_verBotonRojoCleanP2, false );Set(_verBotonRojoCleanP3, false );Set(_verBotonRojoCleanP4, true );Set(_verBotonRojoCleanP5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo Operación Servicio"
+            Visible: =_verBotonBlancoCleanP4
+            Width: =150
+            X: =18
+            Y: =473
+            ZIndex: =27
+
+        ButtonBlanco5_2_179 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fCLEAN_PIPES_ANTIDDOS%252fModelo_Costos_CleanPipes_AntiDDoS.pdf")
+                ;Set(_verBotonBlancoCleanP1,true);Set(_verBotonBlancoCleanP2,true);Set(_verBotonBlancoCleanP3,true);Set(_verBotonBlancoCleanP4,true);Set(_verBotonBlancoCleanP5,false)
+                ;Set(_verBotonRojoCleanP1,false);Set(_verBotonRojoCleanP2,false);Set(_verBotonRojoCleanP3,false);Set(_verBotonRojoCleanP4,false);Set(_verBotonRojoCleanP5,true)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonBlancoCleanP5
+            Width: =150
+            X: =18
+            Y: =527
+            ZIndex: =29
+
+        ButtonBlanco4_2_183 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf");
+                Set(_verBotonBlancoCleanP1, true );Set(_verBotonBlancoCleanP2, true );Set(_verBotonBlancoCleanP3, false );Set(_verBotonBlancoCleanP4, true );Set(_verBotonBlancoCleanP5,true)
+                ;Set(_verBotonRojoCleanP1, false );Set(_verBotonRojoCleanP2, false );Set(_verBotonRojoCleanP3, true );Set(_verBotonRojoCleanP4, false );Set(_verBotonRojoCleanP5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestión de la Configuración"
+            Visible: =_verBotonBlancoCleanP3
+            Width: =150
+            X: =18
+            Y: =419
+            ZIndex: =30
+
+    Label6_53 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =104
+        Size: =14
+        Text: =" (Anti Denegación de Servicios Distribuido-AntiDDoS)"
+        Width: =144
+        X: =18
+        Y: =190
+        ZIndex: =32
+
+    botonesRojosCleanPipes As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =32
+
+        ButtonRojo1_2_128 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonRojoCleanP1
+            Width: =150
+            X: =18
+            Y: =311
+            ZIndex: =20
+
+        ButtonRojo2_144 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonRojoCleanP2
+            Width: =150
+            X: =18
+            Y: =365
+            ZIndex: =21
+
+        ButtonRojo2_146 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo Operación Servicio"
+            Visible: =_verBotonRojoCleanP4
+            Width: =150
+            X: =18
+            Y: =473
+            ZIndex: =22
+
+        ButtonRojo2_147 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modeo de Costos"
+            Visible: =_verBotonRojoCleanP5
+            Width: =150
+            X: =18
+            Y: =527
+            ZIndex: =24
+
+        ButtonRojo2_145 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestion de la Configuración"
+            Visible: =_verBotonRojoCleanP3
+            Width: =150
+            X: =18
+            Y: =419
+            ZIndex: =31
+

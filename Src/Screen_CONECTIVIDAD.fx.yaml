@@ -1,0 +1,328 @@
+Screen_CONECTIVIDAD As screen:
+    Fill: =
+    Height: =700
+    OnVisible: |-
+        =Set(var_ddConect,0);
+        Reset(DD_Internet);
+        Reset(DD_Datos)
+    Width: =1440
+
+    Image21_4 As image:
+        Height: =700
+        Image: =Fondo_3b
+        ImagePosition: =ImagePosition.Fill
+        Width: =866
+        X: =574
+        ZIndex: =1
+
+    Rectangle1_15 As rectangle:
+        Fill: =RGBA(68, 68, 68, 1)
+        Height: =700
+        Width: =264
+        ZIndex: =33
+
+    Label47_9 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        Size: =39
+        Text: ="GENERAL"
+        Width: =197
+        X: =30
+        Y: =205
+        ZIndex: =34
+
+    Label48_7 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =25
+        Size: =19
+        Text: ="INFORMACIÓN"
+        Width: =216
+        X: =34
+        Y: =179
+        ZIndex: =35
+
+    Label49_4 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =134
+        Italic: =true
+        Size: =14
+        Text: ="""Información sobre plataforma, componentes transversales, diseños técnicos y costos sobre los cuales se prestan los servicios."""
+        Width: =187
+        X: =32
+        Y: =269
+        ZIndex: =36
+
+    Button2_134 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =14
+        Text: ="CONSULTELO AQUÍ"
+        Width: =169
+        X: =47
+        Y: =421
+        ZIndex: =37
+
+    Image22_4 As image:
+        Height: =45
+        Image: ='Recurso 29_1'
+        Width: =46
+        X: =16
+        Y: =404
+        ZIndex: =38
+
+    Image11_7 As image:
+        Height: =54
+        Image: =Recurso_6
+        Width: =145
+        X: =59
+        Y: =20
+        ZIndex: =39
+
+    Label47_10 As label:
+        Color: =RGBA(80, 80, 80, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =69
+        Size: =50
+        Text: ="CONECTIVIDAD"
+        Width: =414
+        X: =401
+        Y: =154
+        ZIndex: =41
+
+    Navegar As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =42
+
+        Icon5_17 As icon.Home:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =30
+            Icon: =Icon.Home
+            OnSelect: =Navigate(Screen2)
+            Tooltip: ="Inicio"
+            Width: =47
+            X: =1365
+            Y: =47
+            ZIndex: =18
+
+        Icon6_19 As icon.Reset:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =30
+            Icon: =Icon.Reset
+            OnSelect: =Navigate(Screen2,ScreenTransition.CoverRight)
+            Tooltip: ="Regresar"
+            Width: =47
+            X: =1365
+            Y: =98
+            ZIndex: =19
+
+        Image10_11 As image:
+            Height: =33
+            Image: =mailbox
+            OnSelect: =Navigate(Contacto)
+            Width: =47
+            X: =1365
+            Y: =140
+            ZIndex: =40
+
+    G_Internet As group:
+        Height: =5
+        Width: =5
+        X: =-688
+        Y: =40
+        ZIndex: =45
+
+        B_Internet As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddConect,1)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Internet"
+            Width: =210
+            X: =1195
+            Y: =266
+            ZIndex: =42
+
+        DD_Internet As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: |-
+                =Distinct(
+                    Filter(
+                        Lista_familias,
+                        Title = "Conectividad",
+                        ServiciosN1 = "Internet"
+                    ),
+                    ServiciosN2
+                )
+            OnChange: |+
+                =UpdateContext({_VarProtaseg: DD_Internet.Selected.Result});
+                Switch(
+                    _VarProtaseg,
+                    "Internet Dedicado",
+                    Navigate('ScreenConect-internet-dedicado',Cover),
+                    "Internet Banda Ancha",
+                    Navigate('Screen-Conect-internet-bandaancha',Cover),
+                    "WTTH",
+                    Navigate(Screen2,Cover),
+                    "WIFI Mesh",
+                    Navigate('ScreenConect-internet-wifimesh',Cover)
+                );
+                
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddConect=1,true,
+                    false
+                )
+            Width: =275
+            X: =920
+            Y: =300
+            ZIndex: =43
+
+        Image14_60 As image:
+            Height: =33
+            Image: ='Recurso 34_1'
+            Width: =29
+            X: =1226
+            Y: =305
+            ZIndex: =44
+
+    G_Datos As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =48
+
+        Button2_245 As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddConect,2)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Datos"
+            Width: =210
+            X: =310
+            Y: =382
+            ZIndex: =45
+
+        Image14_61 As image:
+            Height: =28
+            Image: ='Recurso 32_1'
+            Width: =32
+            X: =342
+            Y: =416
+            ZIndex: =46
+
+        DD_Datos As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: |-
+                =Distinct(
+                    Filter(
+                        Lista_familias,
+                        Title = "Conectividad",
+                        ServiciosN1 = "Datos"
+                    ),
+                    ServiciosN2
+                )
+            OnChange: |
+                =UpdateContext({_VarDatosMenu: DD_Datos.Selected.Result});
+                Switch(
+                    _VarDatosMenu,
+                    "MPLS",
+                    Navigate('Screen-Conect-datos-Mpls',Cover),
+                    "Metro Ethernet",
+                    Navigate('Screen-Conect-datos-Metro_Ethernet',Cover),
+                    "SD - WAN",
+                    Navigate('ScreenConect-datos-sdwan',Cover),
+                    "LAN-WLAN",
+                    Navigate(Screen2,Cover)
+                );
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddConect=2,true,
+                    false
+                )
+            Width: =275
+            X: =520
+            Y: =403
+            ZIndex: =47
+

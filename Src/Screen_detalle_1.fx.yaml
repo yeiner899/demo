@@ -1,0 +1,271 @@
+"Screen_detalle_1 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fCXaaS_VOZ_Caracterización_del_Servicio.pdf")
+    Width: =1440
+
+    Rectangle1_2 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =620
+        Width: =275
+        Y: =83
+        ZIndex: =1
+
+    Button2_54 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fCXaaS_VOZ_Caracterización_del_Servicio.pdf")
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =11
+        Text: ="Caracterización del Servicio"
+        Width: =150
+        X: =54
+        Y: =202
+        ZIndex: =2
+
+    Button2_55 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fCXaaS_Voz_Catalogo_Tecnico.pdf")
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Catálogo Técnico"
+        Width: =150
+        X: =54
+        Y: =250
+        ZIndex: =3
+
+    Button2_56 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fCXaas_Gestion_configuracion.pdf")
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Gestión de Configuración"
+        Width: =150
+        X: =54
+        Y: =298
+        ZIndex: =4
+
+    Button2_57 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fTemplateClaroPortafolioTest.pdf")
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Modelo Operación Servicio"
+        Width: =150
+        X: =54
+        Y: =346
+        ZIndex: =5
+
+    Button2_61 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Catálogo de Negocio"
+        Width: =150
+        X: =54
+        Y: =447
+        ZIndex: =7
+
+    Icon5_3 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =30
+        X: =1360
+        Y: =80
+        ZIndex: =8
+
+    Icon6_3 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_TRES_1)
+        Tooltip: ="Regresar"
+        Width: =30
+        X: =1360
+        Y: =120
+        ZIndex: =9
+
+    Button2_59 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Gestión de Activos"
+        Width: =150
+        X: =54
+        Y: =394
+        ZIndex: =10
+
+    PdfViewer1 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =683
+        ShowControls: =true
+        Width: =1071
+        X: =275
+        Y: =17
+        ZIndex: =11
+
+    URL_pdf As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =221
+        X: =54
+        Y: =3
+        ZIndex: =12
+
+    Image24 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =220
+        X: =22
+        Y: =2
+        ZIndex: =13
+
+    Image25 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =59
+        Y: =610
+        ZIndex: =14
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =25
+
+        Image15_2 As image:
+            Height: =45
+            Image: ='Recurso 28'
+            Width: =37
+            X: =26
+            Y: =115
+            ZIndex: =15
+
+        Label6_4 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =30
+            Size: =18
+            Text: ="AUTOSERVICIO"
+            Width: =198
+            X: =63
+            Y: =130
+            ZIndex: =16
+
+        Label11_2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(68, 68, 68, 1)
+            Height: =26
+            Size: =14
+            Text: ="VOZ &"
+            Width: =90
+            X: =65
+            Y: =112
+            ZIndex: =17
+

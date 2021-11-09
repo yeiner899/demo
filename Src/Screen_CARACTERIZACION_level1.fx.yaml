@@ -1,0 +1,283 @@
+"Screen_CARACTERIZACION_level1 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCONECTIVIDAD%252fPDF%252fCaracterizacion_servicio_MPLS.pdf")
+        ;Set(_verBotonBlancoMpls1,false);Set(_verBotonBlancoMpls2,true);Set(_verBotonBlancoMpls3,true);Set(_verBotonBlancoMpls4,true)
+        ;Set(_verBotonRojoMpls1,true);Set(_verBotonRojoMpls2,false);Set(_verBotonRojoMpls3,false);Set(_verBotonRojoMpls4,false)
+    Width: =1440
+
+    URL_pdf_38 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =184
+        ZIndex: =1
+
+    Rectangle1_46 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =621
+        Width: =421
+        Y: =79
+        ZIndex: =2
+
+    Icon5_48 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Inicio)
+        Tooltip: ="Inicio"
+        Width: =25
+        X: =1412
+        Y: =70
+        ZIndex: =3
+
+    Icon6_50 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_CARACTERIZACION,ScreenTransition.CoverRight)
+        Tooltip: ="Regresar"
+        Width: =21
+        X: =1412
+        Y: =114
+        ZIndex: =4
+
+    Image25_38 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =5
+
+    Image10_42 As image:
+        Height: =26
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =26
+        X: =1410
+        Y: =154
+        ZIndex: =7
+
+    Label6_85 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =95
+        Size: =15
+        Text: |-
+            ="Conoce cómo se caracteriza un Servicio en el Portafolio:"
+        Width: =310
+        X: =56
+        Y: =84
+        ZIndex: =9
+
+    Label4_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =79
+        Size: =21
+        Text: ="ARTEFACTO DE CARACTERIZACIÓN DE SERVICIOS"
+        Width: =977
+        X: =420
+        ZIndex: =10
+
+    Image24_38 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =178
+        X: =87
+        ZIndex: =11
+
+    Label16_3 As label:
+        Fill: =RGBA(116, 116, 116, 1)
+        Height: =88
+        Size: =21
+        Text: =
+        Width: =976
+        X: =421
+        Y: =612
+        ZIndex: =16
+
+    Label47_5 As label:
+        Fill: =RGBA(116, 116, 116, 1)
+        Height: =544
+        Size: =21
+        Text: =
+        Width: =94
+        X: =1303
+        Y: =79
+        ZIndex: =18
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderColor: =RGBA(116, 116, 116, 1)
+        BorderThickness: =3
+        Height: =281
+        Items: =Distinct(Caracterización_PortafolioServicio,Title)
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =47
+        Width: =343
+        X: =49
+        Y: =179
+        ZIndex: =19
+
+        Image22 As image:
+            Height: =0
+            OnSelect: =Select(Parent)
+            Width: =7
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title3 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.Result
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image22.Width - 104
+            X: =55
+            Y: =15
+            ZIndex: =2
+
+        Separator3 As rectangle:
+            BorderColor: =RGBA(116, 116, 116, 1)
+            Fill: =RGBA(116, 116, 116, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Label48 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =32
+        Size: =15
+        Text: ="Buscar Palabra Clave..."
+        Width: =343
+        X: =49
+        Y: =475
+        ZIndex: =20
+
+    TI_Buscar As text:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        Default: =
+        Height: =30
+        HoverBorderColor: =RGBA(68, 68, 68, 1)
+        HoverFill: =RGBA(116, 116, 116, 1)
+        Size: =21
+        Width: =343
+        X: =49
+        Y: =520
+        ZIndex: =21
+
+    Image27 As image:
+        Height: =45
+        Image: ='Recurso 29_1'
+        Width: =46
+        X: =15
+        Y: =485
+        ZIndex: =22
+
+    "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =467
+        Items: =Search(Caracterización_PortafolioServicio,TI_Buscar.Text,"Title","field_Atributo","field_Descripci_x0020_n")
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Width: =788
+        X: =515
+        Y: =145
+        ZIndex: =23
+
+        Image29 As image:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =2
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title5 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image29.Width - 104
+            X: =Image29.X + Image29.Width + 24
+            Y: =9
+            ZIndex: =2
+
+        Subtitle4 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.Atributo
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =Title5.X
+            Y: =Title5.Y + Title5.Height + 4
+            ZIndex: =3
+
+        Separator5 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Subtitle4_1 As label:
+            Height: =58
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.Descripción
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =Title5.X
+            Y: =80
+            ZIndex: =6
+
+    Label47_6 As label:
+        Fill: =RGBA(116, 116, 116, 1)
+        Height: =544
+        Size: =21
+        Text: =
+        Width: =93
+        X: =421
+        Y: =79
+        ZIndex: =24
+
+    Label16_4 As label:
+        Fill: =RGBA(116, 116, 116, 1)
+        Height: =66
+        Size: =21
+        Text: =
+        Width: =976
+        X: =421
+        Y: =79
+        ZIndex: =25
+

@@ -1,0 +1,314 @@
+Screen_CONTACT As screen:
+    Fill: =
+    Height: =700
+    OnVisible: |-
+        =Set(var_ddContact,0);
+        Reset(DD_CXaaS);
+        Reset(DD_PCCaaS);
+    Width: =1440
+
+    Image21_2 As image:
+        Height: =700
+        Image: =Fondo_3b
+        ImagePosition: =ImagePosition.Fill
+        Width: =866
+        X: =574
+        ZIndex: =1
+
+    Icon5_5 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =30
+        X: =1350
+        Y: =47
+        ZIndex: =18
+
+    Icon6_5 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen2,ScreenTransition.CoverRight)
+        Tooltip: ="Regresar"
+        Width: =30
+        X: =1350
+        Y: =98
+        ZIndex: =19
+
+    Image19_2 As image:
+        Height: =117
+        Image: ='Recurso 37'
+        Width: =228
+        X: =600
+        Y: =40
+        ZIndex: =20
+
+    Rectangle1_3 As rectangle:
+        Fill: =RGBA(68, 68, 68, 1)
+        Height: =700
+        Width: =264
+        ZIndex: =33
+
+    Label47_4 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        Size: =39
+        Text: ="GENERAL"
+        Width: =197
+        X: =30
+        Y: =205
+        ZIndex: =34
+
+    Label48_5 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =25
+        Size: =19
+        Text: ="INFORMACIÓN"
+        Width: =216
+        X: =34
+        Y: =179
+        ZIndex: =35
+
+    Label49_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =134
+        Italic: =true
+        Size: =14
+        Text: ="""Información sobre plataforma, componentes transversales, diseños técnicos y costos sobre los cuales se prestan los servicios."""
+        Width: =187
+        X: =32
+        Y: =269
+        ZIndex: =36
+
+    Button2_87 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Navigate(Información_General_2)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =14
+        Text: ="CONSULTELO AQUÍ"
+        Width: =169
+        X: =47
+        Y: =421
+        ZIndex: =37
+
+    Image22_2 As image:
+        Height: =45
+        Image: ='Recurso 29_1'
+        Width: =46
+        X: =16
+        Y: =404
+        ZIndex: =38
+
+    Image11_5 As image:
+        Height: =54
+        Image: =Recurso_6
+        Width: =145
+        X: =59
+        Y: =20
+        ZIndex: =39
+
+    Image10_8 As image:
+        Height: =33
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =30
+        X: =1350
+        Y: =140
+        ZIndex: =40
+
+    G_CXaaS As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =50
+
+        B_CXaaS As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddContact,1)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="CXaaS"
+            Width: =210
+            X: =306
+            Y: =288
+            ZIndex: =47
+
+        DD_CXaaS As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="Contact Center as a service",ServiciosN1="CXaaS"),ServiciosN2)
+            OnChange: |
+                =UpdateContext({_VarCXaaSMenu: DD_CXaaS.Selected.Result});
+                Switch(
+                    _VarCXaaSMenu,
+                    "Voz y Autoservicio",
+                    Navigate('Screen_Contac-Voz',Cover),
+                    "Web Callback",
+                    Navigate('Screen_Contact-Web',Cover),
+                    "Digitales",
+                    Navigate(Screen2,Cover),
+                    "Social Media",
+                    Navigate(Screen2,Cover),
+                    "Análisis y Optimización",
+                    Navigate(Screen2,Cover),
+                    "Servicios Profesionales",
+                    Navigate(Screen2,Cover),
+                    "Calidad y WFM",
+                    Navigate(Screen2,Cover)
+                );
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddContact=1,true,
+                    false
+                )
+            Width: =275
+            X: =516
+            Y: =315
+            ZIndex: =48
+
+        Image_audifonos_2 As image:
+            Height: =33
+            Image: ='Recurso 31_1'
+            Width: =31
+            X: =345
+            Y: =321
+            ZIndex: =49
+
+    G_PCCaaS As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =53
+
+        B_PCCaaS As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddContact,2)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="PCCaaS"
+            Width: =210
+            X: =1150
+            Y: =288
+            ZIndex: =50
+
+        DD_PCCaaS As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="Contact Center as a service",ServiciosN1="PCCaaS"),ServiciosN2)
+            OnChange: |+
+                =UpdateContext({_VarCXaaSMexnu: DD_PCCaaS.Selected.Result});
+                Switch(
+                    _VarCXaaSMenu,
+                    "Voz y Autoservicio",
+                    Navigate(Screen2,Cover),
+                    "Web Callback",
+                    Navigate(Screen2,Cover),
+                    "Digitales",
+                    Navigate(Screen2,Cover),
+                    "Social Media",
+                    Navigate(Screen2,Cover),
+                    "Análisis y Optimización",
+                    Navigate(Screen2,Cover),
+                    "Servicios Profesionales",
+                    Navigate(Screen2,Cover),
+                    "Calidad y WFM",
+                    Navigate(Screen2,Cover)
+                );
+                
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddContact=2,true,
+                    false
+                )
+            Width: =275
+            X: =875
+            Y: =315
+            ZIndex: =51
+
+        Image14_48 As image:
+            Height: =33
+            Image: ='Recurso 35_1'
+            Width: =33
+            X: =1170
+            Y: =320
+            ZIndex: =52
+

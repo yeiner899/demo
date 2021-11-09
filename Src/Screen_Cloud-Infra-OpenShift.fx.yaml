@@ -1,0 +1,476 @@
+"'Screen_Cloud-Infra-OpenShift' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCLOUD%252fPDF%252fOpenShift_Caracterizacion_servicio.pdf")
+        ;Set(_verBotonBlancoOpens1,false);Set(_verBotonBlancoOpens2,true);Set(_verBotonBlancoOpens3,true);Set(_verBotonBlancoOpens4,true);Set(_verBotonBlancoOpens5,true);Set(_verBotonBlancoOpens6,true)
+        ;Set(_verBotonRojoOpens1,true);Set(_verBotonRojoOpens2,false);Set(_verBotonRojoOpens3,false);Set(_verBotonRojoOpens4,false);Set(_verBotonRojoOpens5,false);Set(_verBotonRojoOpens6,false)
+    Width: =1440
+
+    URL_pdf_21 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =221
+        ZIndex: =1
+
+    Rectangle1_14 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =620
+        Width: =189
+        Y: =80
+        ZIndex: =2
+
+    Icon5_16 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =25
+        X: =1412
+        Y: =70
+        ZIndex: =8
+
+    Icon6_18 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_CLOUD,CoverRight)
+        Tooltip: ="Regresar"
+        Width: =21
+        X: =1412
+        Y: =114
+        ZIndex: =9
+
+    PdfViewer1_21 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_21.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =700
+        ShowControls: =true
+        Width: =1214
+        X: =189
+        ZIndex: =11
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_21 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =153
+        X: =6
+        Y: =7
+        ZIndex: =12
+
+    Image25_21 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =13
+
+    Label6_42 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =21
+        Size: =14
+        Text: ="INFRAESTRUCTURA"
+        Width: =178
+        X: =5
+        Y: =140
+        ZIndex: =18
+
+    Image10_10 As image:
+        Height: =26
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =26
+        X: =1410
+        Y: =154
+        ZIndex: =23
+
+    Label6_41 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =26
+        Size: =19
+        Text: ="CLOUD"
+        Width: =159
+        X: =51
+        Y: =105
+        ZIndex: =26
+
+    Label6_43 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =45
+        Size: =14
+        Text: ="OPENSHIFT"
+        Width: =121
+        X: =41
+        Y: =152
+        ZIndex: =32
+
+    botonesRojosOpenShift As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =34
+
+        ButtonRojo1_2_125 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonRojoOpens1
+            Width: =150
+            X: =18
+            Y: =206
+            ZIndex: =20
+
+        ButtonRojo2_133 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonRojoOpens2
+            Width: =150
+            X: =18
+            Y: =260
+            ZIndex: =21
+
+        ButtonRojo2_135 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo Operación Servicio"
+            Visible: =_verBotonRojoOpens4
+            Width: =150
+            X: =18
+            Y: =368
+            ZIndex: =22
+
+        ButtonRojo2_136 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonRojoOpens5
+            Width: =150
+            X: =18
+            Y: =422
+            ZIndex: =24
+
+        ButtonRojo2_134 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestion de la Configuración"
+            Visible: =_verBotonRojoOpens3
+            Width: =150
+            X: =18
+            Y: =314
+            ZIndex: =31
+
+        ButtonRojo2_156 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo Capacidad"
+            Visible: =_verBotonRojoOpens6
+            Width: =150
+            X: =18
+            Y: =474
+            ZIndex: =33
+
+    botonesBlancosOpenShift As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =35
+
+        ButtonBlanco1_2_124 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCLOUD%252fPDF%252fOpenShift_Caracterizacion_servicio.pdf")
+                ;Set(_verBotonBlancoOpens1,false);Set(_verBotonBlancoOpens2,true);Set(_verBotonBlancoOpens3,true);Set(_verBotonBlancoOpens4,true);Set(_verBotonBlancoOpens5,true);Set(_verBotonBlancoOpens6,true)
+                ;Set(_verBotonRojoOpens1,true);Set(_verBotonRojoOpens2,false);Set(_verBotonRojoOpens3,false);Set(_verBotonRojoOpens4,false);Set(_verBotonRojoOpens5,false);Set(_verBotonRojoOpens6,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonBlancoOpens1
+            Width: =150
+            X: =19
+            Y: =206
+            ZIndex: =3
+
+        ButtonBlanco2_2_126 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCLOUD%252fPDF%252fOpenShift_Catalogo_tecnico.pdf")
+                ;Set(_verBotonBlancoOpens1,true);Set(_verBotonBlancoOpens2,false);Set(_verBotonBlancoOpens3,true);Set(_verBotonBlancoOpens4,true);Set(_verBotonBlancoOpens5,true);Set(_verBotonBlancoOpens6,true)
+                ;Set(_verBotonRojoOpens1,false);Set(_verBotonRojoOpens2,true);Set(_verBotonRojoOpens3,false);Set(_verBotonRojoOpens4,false);Set(_verBotonRojoOpens5,false);Set(_verBotonRojoOpens6,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonBlancoOpens2
+            Width: =150
+            X: =19
+            Y: =260
+            ZIndex: =4
+
+        ButtonBlanco4_2_178 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCLOUD%252fPDF%252fOpenShift_Modelo_Operativo.pdf");Set(_verBotonBlancoOpens1, true );Set(_verBotonBlancoOpens2, true );Set(_verBotonBlancoOpens3, true );Set(_verBotonBlancoOpens4, false );Set(_verBotonBlancoOpens5,true);Set(_verBotonBlancoOpens6,true)
+                ;Set(_verBotonRojoOpens1, false );Set(_verBotonRojoOpens2, false );Set(_verBotonRojoOpens3, false );Set(_verBotonRojoOpens4, true );Set(_verBotonRojoOpens5,false);Set(_verBotonRojoOpens6,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo Operación Servicio"
+            Visible: =_verBotonBlancoOpens4
+            Width: =150
+            X: =19
+            Y: =368
+            ZIndex: =27
+
+        ButtonBlanco5_2_177 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCLOUD%252fPDF%252fOpenShift_Modelo_de_costos.pdf")
+                ;Set(_verBotonBlancoOpens1,true);Set(_verBotonBlancoOpens2,true);Set(_verBotonBlancoOpens3,true);Set(_verBotonBlancoOpens4,true);Set(_verBotonBlancoOpens5,false);Set(_verBotonBlancoOpens6,true)
+                ;Set(_verBotonRojoOpens1,false);Set(_verBotonRojoOpens2,false);Set(_verBotonRojoOpens3,false);Set(_verBotonRojoOpens4,false);Set(_verBotonRojoOpens5,true);Set(_verBotonRojoOpens6,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonBlancoOpens5
+            Width: =150
+            X: =19
+            Y: =422
+            ZIndex: =29
+
+        ButtonBlanco4_2_177 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Lighter
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCLOUD%252fPDF%252fOpenShift_Gestion_Configuracion.pdf")
+                ;Set(_verBotonBlancoOpens1, true );Set(_verBotonBlancoOpens2, true );Set(_verBotonBlancoOpens3, false );Set(_verBotonBlancoOpens4, true );Set(_verBotonBlancoOpens5,true);Set(_verBotonBlancoOpens6,true)
+                ;Set(_verBotonRojoOpens1, false );Set(_verBotonRojoOpens2, false );Set(_verBotonRojoOpens3, true );Set(_verBotonRojoOpens4, false );Set(_verBotonRojoOpens5,false);Set(_verBotonRojoOpens6,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestión de la Configuración"
+            Visible: =_verBotonBlancoOpens3
+            Width: =150
+            X: =19
+            Y: =314
+            ZIndex: =30
+
+        ButtonBlanco5_2_182 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCLOUD%252fPDF%252fOpenShift_Modelo_de_capacidad.pdf")
+                ;Set(_verBotonBlancoOpens1,true);Set(_verBotonBlancoOpens2,true);Set(_verBotonBlancoOpens3,true);Set(_verBotonBlancoOpens4,true);Set(_verBotonBlancoOpens5,true);Set(_verBotonBlancoOpens6,false)
+                ;Set(_verBotonRojoOpens1,false);Set(_verBotonRojoOpens2,false);Set(_verBotonRojoOpens3,false);Set(_verBotonRojoOpens4,false);Set(_verBotonRojoOpens5,false);Set(_verBotonRojoOpens6,true)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo Capacidad"
+            Visible: =_verBotonBlancoOpens6
+            Width: =150
+            X: =18
+            Y: =474
+            ZIndex: =34
+

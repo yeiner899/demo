@@ -1,0 +1,376 @@
+"Información_General_2 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fCaracterizacion_General_30072021.pdf")
+        ;Set(_verBotonR1,true);Set(_verBotonR2,false);Set(_verBotonR3,false);Set(_verBotonR4,false)
+        ;Set(_verBotonB1,false);Set(_verBotonB2,true);Set(_verBotonB3,true);Set(_verBotonB4,true)
+    Width: =1440
+
+    URL_pdf_3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =221
+        ZIndex: =1
+
+    Rectangle1_5 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =620
+        Width: =189
+        Y: =80
+        ZIndex: =2
+
+    Icon5_7 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =21
+        X: =1410
+        Y: =70
+        ZIndex: =8
+
+    Icon6_7 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_CONTACT,ScreenTransition.CoverRight)
+        Tooltip: ="Regresar"
+        Width: =21
+        X: =1410
+        Y: =110
+        ZIndex: =9
+
+    PdfViewer1_3 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_3.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: |
+            =696
+        ShowControls: =true
+        Width: =1210
+        X: =189
+        Y: =4
+        ZIndex: =11
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_3 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =153
+        X: =6
+        Y: =7
+        ZIndex: =12
+
+    Image25_3 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =13
+
+    Button2_73 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: |-
+            =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fPlantillaPDF_Catalogo_Tecnico_General_V2.pdf")
+            ;Set(_verBotonR1,false);Set(_verBotonR2,true);Set(_verBotonR3,false);Set(_verBotonR4,false)
+            ;Set(_verBotonB1,true);Set(_verBotonB2,false);Set(_verBotonB3,true);Set(_verBotonB4,true)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =11
+        Text: ="Catálogo Técnico"
+        Visible: =_verBotonB2
+        Width: =150
+        X: =19
+        Y: =355
+        ZIndex: =17
+
+    Button2_74 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: |-
+            =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fModelo_de_Costos_V2.pdf")
+            ;Set(_verBotonR1,false);Set(_verBotonR2,false);Set(_verBotonR3,false);Set(_verBotonR4,true)
+            ;Set(_verBotonB1,true);Set(_verBotonB2,true);Set(_verBotonB3,true);Set(_verBotonB4,false)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Modelo de Costos"
+        Visible: =_verBotonB4
+        Width: =150
+        X: =19
+        Y: =446
+        ZIndex: =18
+
+    Button2_75 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: |-
+            =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fTemplateClaroPortafolioV9.pdf")
+            ;Set(_verBotonR1,false);Set(_verBotonR2,false);Set(_verBotonR3,true);Set(_verBotonR4,false)
+            ;Set(_verBotonB1,true);Set(_verBotonB2,true);Set(_verBotonB3,false);Set(_verBotonB4,true)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Modelo Operación Servicio"
+        Visible: =_verBotonB3
+        Width: =150
+        X: =19
+        Y: =400
+        ZIndex: =19
+
+    Button2_94 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =11
+        Text: ="Catálogo Técnico"
+        Visible: =_verBotonR2
+        Width: =150
+        X: =19
+        Y: =355
+        ZIndex: =23
+
+    Button2_95 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Modelo Operación Servicio"
+        Visible: =_verBotonR3
+        Width: =150
+        X: =19
+        Y: =400
+        ZIndex: =24
+
+    Button2_96 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Modelo de Costos"
+        Visible: =_verBotonR4
+        Width: =150
+        X: =19
+        Y: =446
+        ZIndex: =25
+
+    Button2_98 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =11
+        Text: ="Caracterización del Servicio"
+        Visible: =_verBotonR1
+        Width: =150
+        X: =19
+        Y: =310
+        ZIndex: =26
+
+    Button2_99 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: |-
+            =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fCaracterizacion_General_30072021.pdf")
+            ;Set(_verBotonR1,true);Set(_verBotonR2,false);Set(_verBotonR3,false);Set(_verBotonR4,false)
+            ;Set(_verBotonB1,false);Set(_verBotonB2,true);Set(_verBotonB3,true);Set(_verBotonB4,true)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =11
+        Text: ="Caracterización del Servicio"
+        Visible: =_verBotonB1
+        Width: =150
+        X: =19
+        Y: =310
+        ZIndex: =27
+
+    Label47_2 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        PaddingLeft: =0
+        PaddingRight: =0
+        Size: =32
+        Text: ="GENERAL"
+        Width: =161
+        X: =16
+        Y: =125
+        ZIndex: =30
+
+    Label48_2 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =23
+        Size: =16
+        Text: ="INFORMACIÓN"
+        Width: =161
+        X: =11
+        Y: =110
+        ZIndex: =31
+
+    Label47_3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        PaddingLeft: =0
+        PaddingRight: =0
+        Size: =36
+        Text: ="CENTER"
+        Width: =161
+        X: =23
+        Y: =207
+        ZIndex: =32
+
+    Label48_3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =23
+        Size: =15
+        Text: ="CONTACT"
+        Width: =161
+        X: =19
+        Y: =190
+        ZIndex: =33
+
+    Label48_4 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =23
+        Size: =15
+        Text: ="AS A SERVICE"
+        Width: =161
+        X: =36
+        Y: =249
+        ZIndex: =34
+
+    Image10_3 As image:
+        Height: =36
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =25
+        X: =1408
+        Y: =150
+        ZIndex: =35
+

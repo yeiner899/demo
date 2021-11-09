@@ -1,0 +1,59 @@
+Sitio_en_Construcción_2 As screen:
+    Height: =810
+    Width: =1440
+
+    Image7_2 As image:
+        Height: =800
+        Image: =fondo4B
+        Width: =918
+        X: =4
+        Y: =4
+        ZIndex: =1
+
+    Image9_2 As image:
+        Height: =66
+        Image: =Recurso_3
+        Width: =222
+        X: =138
+        Y: =198
+        ZIndex: =3
+
+    Icon7_3 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Width: =30
+        X: =1368
+        Y: =50
+        ZIndex: =5
+
+    Icon6_11 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_TRES_1)
+        Tooltip: ="Regresar"
+        Width: =30
+        X: =1368
+        Y: =100
+        ZIndex: =6
+
+    Rectangle4 As rectangle:
+        Fill: =RGBA(232, 244, 217, 1)
+        Height: =738
+        Width: =504
+        X: =852
+        Y: =33
+        ZIndex: =7
+
+    Button5 As button:
+        Height: =70
+        OnSelect: =Navigate(Screen3)
+        Size: =24
+        Text: ="Prueba PDF"
+        Width: =280
+        X: =360
+        Y: =585
+        ZIndex: =8
+

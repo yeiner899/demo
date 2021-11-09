@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "468d5099-e65b-4afc-a675-d15740c70439",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "GetFileAttachment_1",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

@@ -1,0 +1,501 @@
+Screen2 As screen:
+    Height: =700
+    OnVisible: =Reset(TI_buscarServ)
+    Width: =1440
+
+    Image4 As image:
+        Height: =700
+        Image: =fondo_2B
+        Width: =810
+        ZIndex: =1
+
+    Button_Ciberseguridad As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverBorderColor: =ColorFade(Self.BorderColor, 0%)
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: |
+            =Navigate(Screen_CIBERSEGURIDAD,ScreenTransition.Cover)
+        PaddingTop: =3
+        PressedFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="CIBERSEGURIDAD"
+        Width: =280
+        X: =1005
+        Y: =160
+        ZIndex: =2
+
+    Button_Aplicaciones As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =3
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="APLICACIONES"
+        Width: =280
+        X: =1005
+        Y: =204
+        ZIndex: =3
+
+    Button_Internet As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =3
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="INTERNET DE LAS COSAS  - IoT"
+        Width: =280
+        X: =1005
+        Y: =248
+        ZIndex: =4
+
+    Button_Cloud As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Navigate(Screen_CLOUD,ScreenTransition.Cover)
+        PaddingTop: =3
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="CLOUD"
+        Width: =280
+        X: =1005
+        Y: =292
+        ZIndex: =5
+
+    Button_SolucionesD As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =3
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="SOLUCIONES DIGITALES"
+        Width: =280
+        X: =1005
+        Y: =336
+        ZIndex: =6
+
+    Button_MovilM As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =3
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="MOBILE MARKETING"
+        Width: =280
+        X: =1005
+        Y: =380
+        ZIndex: =7
+
+    Button_Colaboracion As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Navigate(Screen_COLABORACION,ScreenTransition.Cover)
+        PaddingTop: =3
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="COLABORACIÓN"
+        Width: =280
+        X: =1005
+        Y: =424
+        ZIndex: =8
+
+    Button_Conectividad As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Navigate(Screen_CONECTIVIDAD,ScreenTransition.Cover)
+        PaddingTop: =3
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="CONECTIVIDAD"
+        Width: =280
+        X: =1005
+        Y: =512
+        ZIndex: =9
+
+    Button_Telefonia As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Navigate(Screen_TELEFONIA,ScreenTransition.Cover)
+        PaddingTop: =3
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="TELEFONÍA"
+        Width: =280
+        X: =1005
+        Y: =468
+        ZIndex: =10
+
+    Button_Datacenter As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Navigate(Screen_DATACENTER,ScreenTransition.Cover)
+        PaddingRight: =8
+        PaddingTop: =3
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="DATA CENTER"
+        Width: =280
+        X: =1005
+        Y: =558
+        ZIndex: =11
+
+    Label7 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =66
+        Size: =54
+        Text: ="SERVICIOS"
+        Width: =314
+        X: =496
+        Y: =110
+        ZIndex: =12
+
+    Label8 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Bold
+        Height: =64
+        Size: =58
+        Text: ="B2B"
+        Width: =167
+        X: =615
+        Y: =176
+        ZIndex: =13
+
+    Image3 As image:
+        Height: =76
+        Image: =ClaroBlanco
+        Width: =221
+        X: =13
+        Y: =572
+        ZIndex: =14
+
+    Icon5 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Inicio)
+        Tooltip: ="Inicio"
+        Width: =30
+        X: =1350
+        Y: =50
+        ZIndex: =15
+
+    Icon6 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Inicio)
+        Tooltip: ="Regresar"
+        Width: =30
+        X: =1350
+        Y: =108
+        ZIndex: =16
+
+    Button_Contact As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverBorderColor: =ColorFade(Self.BorderColor, 0%)
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Navigate(Screen_CONTACT,Cover)
+        PaddingTop: =3
+        PressedFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="CONTACT CENTER AS A SERVICE"
+        Width: =280
+        X: =1005
+        Y: =72
+        ZIndex: =17
+
+    Button_SAP As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =30
+        HoverBorderColor: =ColorFade(Self.BorderColor, 0%)
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Navigate(Screen_SAP,Cover)
+        PaddingTop: =3
+        PressedFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =14
+        Text: ="SAP"
+        Width: =280
+        X: =1005
+        Y: =116
+        ZIndex: =18
+
+    Image10 As image:
+        Height: =33
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =32
+        X: =1349
+        Y: =160
+        ZIndex: =19
+
+    Lupa_BuscarServ As icon.Search:
+        Color: =RGBA(116, 116, 116, 1)
+        FocusedBorderColor: =
+        Height: =28
+        Icon: =Icon.Search
+        Width: =25
+        X: =900
+        Y: =299
+        ZIndex: =20
+
+    ManoScreen2 As image:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =45
+        Image: ='Recurso 29_1'
+        Width: =46
+        X: =560
+        Y: =290
+        ZIndex: =21
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =225
+        Items: =Search(Lista_familias,TI_buscarServ.Text,"ServiciosN2")
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Visible: =If(IsBlank(TI_buscarServ.Text),false,true)
+        Width: =370
+        X: =600
+        Y: =363
+        ZIndex: =22
+
+        Image28 As image:
+            Height: =64
+            OnSelect: =Select(Parent)
+            Width: =0
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title4 As label:
+            Font: =Font.'Open Sans Condensed'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image28.Width - 104
+            X: =Image28.X + Image28.Width + 24
+            Y: =44
+            ZIndex: =2
+
+        Subtitle2 As label:
+            Font: =Font.'Open Sans Condensed'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.ServiciosN1
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title4.Width
+            X: =Title4.X
+            Y: =Title4.Y + Title4.Height + 4
+            ZIndex: =3
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(116, 116, 116, 1)
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =UpdateContext({_VarServ:ThisItem.Title});
+                Switch(
+                    _VarServ,
+                    "Datacenter",
+                    Navigate(Screen_DATACENTER,ScreenTransition.Cover),
+                    "Ciberseguridad",
+                    Navigate(Screen_CIBERSEGURIDAD,ScreenTransition.Cover),
+                    "Conectividad",
+                    Navigate(Screen_CONECTIVIDAD,ScreenTransition.Cover),
+                    "Telefonía",
+                    Navigate(Screen_TELEFONIA,ScreenTransition.Cover),
+                    "Contact Center as a service",
+                    Navigate(Screen_CONTACT,ScreenTransition.Cover),
+                    "Cloud",
+                    Navigate(Screen_CLOUD,ScreenTransition.Cover),
+                    "SAP",
+                    Navigate(Screen_SAP,ScreenTransition.Cover),
+                    "Colaboración",
+                    Navigate(Screen_COLABORACION,ScreenTransition.Cover)
+                )
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="Ir a la familia del servicio"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator4 As rectangle:
+            Fill: =RGBA(68, 68, 68, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Subtitle2_1 As label:
+            Font: =Font.'Open Sans Condensed'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.ServiciosN2
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title4.Width
+            X: =39
+            Y: =100
+            ZIndex: =6
+
+    TI_buscarServ As text:
+        BorderColor: =RGBA(68, 68, 68, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(116, 116, 116, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =30
+        HintText: ="Buscar Servicio..."
+        HoverBorderColor: =RGBA(68, 68, 68, 1)
+        HoverColor: =RGBA(116, 116, 116, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(116, 116, 116, 1)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =18
+        Width: =336
+        X: =600
+        Y: =298
+        ZIndex: =23
+

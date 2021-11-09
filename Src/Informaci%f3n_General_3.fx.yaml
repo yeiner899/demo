@@ -1,0 +1,207 @@
+"Información_General_3 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fCXaaS_Voz_Catalogo_Tecnico.pdf")
+    Width: =1440
+
+    URL_pdf_4 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =221
+        ZIndex: =1
+
+    Rectangle1_6 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =620
+        Width: =214
+        Y: =80
+        ZIndex: =2
+
+    Icon5_8 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =26
+        X: =1408
+        Y: =80
+        ZIndex: =8
+
+    Icon6_10 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =24
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_TRES_1)
+        Tooltip: ="Regresar"
+        Width: =24
+        X: =1408
+        Y: =126
+        ZIndex: =9
+
+    PdfViewer1_4 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_4.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: |
+            =696
+        ShowControls: =true
+        Width: =1188
+        X: =214
+        Y: =4
+        ZIndex: =11
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_4 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =181
+        X: =8
+        Y: =3
+        ZIndex: =12
+
+    Image25_4 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =39
+        Y: =610
+        ZIndex: =13
+
+    Button2_76 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fCXaaS_Voz_Catalogo_Tecnico.pdf")
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =11
+        Text: ="Catálogo Técnico"
+        Width: =150
+        X: =27
+        Y: =191
+        ZIndex: =17
+
+    Button2_78 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fCXaaS_Modelo_de_Costos.pdf")
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Modelo de Costos"
+        Width: =150
+        X: =27
+        Y: =287
+        ZIndex: =18
+
+    Button2_77 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(68, 68, 68, 1)
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fTemplateClaroPortafolioVersion3.pdf")
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =11
+        Text: ="Modelo Operación Servicio"
+        Width: =150
+        X: =27
+        Y: =239
+        ZIndex: =19
+
+    Container1 As groupContainer:
+        DisplayMode: =DisplayMode.Edit
+        Height: =91
+        LayoutAlignItems: =LayoutAlignItems.Start
+        LayoutDirection: =LayoutDirection.Horizontal
+        LayoutJustifyContent: =LayoutJustifyContent.Start
+        LayoutMode: =LayoutMode.Manual
+        LayoutOverflowX: =LayoutOverflow.Hide
+        LayoutOverflowY: =LayoutOverflow.Hide
+        Width: =150
+        X: =27
+        Y: =80
+        ZIndex: =20
+
+        Label6_8 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =29
+            Size: =16
+            Text: ="General"
+            Width: =106
+            X: =23
+            Y: =62
+            ZIndex: =1
+
+        Label11_6 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(68, 68, 68, 1)
+            Height: =27
+            Size: =12
+            Text: ="Información"
+            Width: =109
+            X: =23
+            Y: =40
+            ZIndex: =2
+
+    Image15_6 As image:
+        Height: =42
+        Image: ='Recurso 28'
+        Width: =30
+        X: =9
+        Y: =125
+        ZIndex: =21
+
+    Image10_4 As image:
+        Height: =25
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =25
+        X: =1408
+        Y: =172
+        ZIndex: =22
+

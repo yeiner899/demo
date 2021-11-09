@@ -1,0 +1,622 @@
+Screen_SAP As screen:
+    Fill: =
+    Height: =700
+    OnVisible: |-
+        =Set(var_ddSap,0);
+        Reset(DD_Consultoria);
+        Reset(DD_Implementacion);
+        Reset(DD_Hec);
+        Reset(DD_Hosting);
+        Reset(DD_SapAdmon);
+        Reset(DD_Hec_1)
+    Width: =1440
+
+    Image21_1 As image:
+        Height: =700
+        Image: =fondo_SAP
+        ImagePosition: =ImagePosition.Fill
+        Width: =1190
+        X: =250
+        ZIndex: =1
+
+    Rectangle1_7 As rectangle:
+        Fill: =RGBA(68, 68, 68, 1)
+        Height: =700
+        Width: =264
+        ZIndex: =5
+
+    Label47_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        Size: =39
+        Text: ="GENERAL"
+        Width: =197
+        X: =30
+        Y: =205
+        ZIndex: =6
+
+    Label48_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =25
+        Size: =19
+        Text: ="INFORMACIÓN"
+        Width: =216
+        X: =34
+        Y: =179
+        ZIndex: =7
+
+    Label49_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =134
+        Italic: =true
+        Size: =14
+        Text: ="""Información sobre plataforma, componentes transversales, diseños técnicos y costos sobre los cuales se prestan los servicios."""
+        Width: =187
+        X: =32
+        Y: =269
+        ZIndex: =8
+
+    Button2_84 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =14
+        Text: ="CONSULTELO AQUÍ"
+        Width: =169
+        X: =47
+        Y: =421
+        ZIndex: =9
+
+    Image22_1 As image:
+        Height: =45
+        Image: ='Recurso 29_1'
+        Width: =46
+        X: =16
+        Y: =404
+        ZIndex: =10
+
+    Image11_4 As image:
+        Height: =54
+        Image: =Recurso_6
+        Width: =145
+        X: =59
+        Y: =20
+        ZIndex: =11
+
+    Label47_17 As label:
+        Color: =RGBA(77, 77, 77, 1)
+        DisabledColor: =RGBA(255, 0, 0, 1)
+        DisabledFill: =RGBA(255, 0, 0, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =78
+        Size: =68
+        Text: ="SAP"
+        Width: =148
+        X: =748
+        Y: =252
+        ZIndex: =13
+
+    "'G_SAP-Consultoria' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =30
+
+        Button2_85 As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddSap,6)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Consultoría"
+            Width: =210
+            X: =1096
+            Y: =510
+            ZIndex: =27
+
+        DD_Consultoria As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: |-
+                =Distinct(
+                    Filter(
+                        Lista_familias,
+                        Title = "SAP",
+                        ServiciosN1 = "SAP Consultorías"
+                    ),
+                    ServiciosN2
+                )
+            OnChange: |+
+                =
+                
+                
+                
+                
+                
+            OnSelect: = 
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddSap=6,true,
+                    false
+                )
+            Width: =275
+            X: =821
+            Y: =533
+            ZIndex: =28
+
+        Image14_22 As image:
+            Height: =28
+            Image: ='Recurso 32_1'
+            Width: =32
+            X: =1120
+            Y: =545
+            ZIndex: =29
+
+    "'G_SAP-hosting' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =32
+
+        Button2_83 As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddSap,4)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="SAP Hosting "
+            Width: =210
+            X: =1100
+            Y: =109
+            ZIndex: =21
+
+        DD_Hosting As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="SAP",ServiciosN1="SAP Hosting"),ServiciosN2)
+            OnChange: |+
+                = Navigate(Screen_SAP_Hosting,Cover)
+                
+                
+                
+                
+                
+            OnSelect: =
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddSap=4,true,
+                    false
+                )
+            Width: =275
+            X: =825
+            Y: =132
+            ZIndex: =22
+
+        Image14_14 As image:
+            Height: =37
+            Image: ='Recurso 31_2'
+            Width: =35
+            X: =1120
+            Y: =135
+            ZIndex: =23
+
+    "'G_SAP-Implementacion' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =32
+
+        Button2_86 As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddSap,5)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Servicios de Implementación"
+            Width: =210
+            X: =1062
+            Y: =322
+            ZIndex: =24
+
+        DD_Implementacion As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: |-
+                =Distinct(
+                    Filter(
+                        Lista_familias,
+                        Title = "SAP",
+                        ServiciosN1 = "Servicios de Implementación"
+                    ),
+                    ServiciosN2
+                )
+            OnChange: |+
+                =UpdateContext({_VarSapImp: DD_Implementacion.Selected.Result});
+                Switch(
+                    _VarSapImp,
+                    "Implementación Técnico",
+                    Navigate(Screen_SAP_Implementacion_Tecnico,Cover),
+                    "Implementación Funcional",
+                    Navigate(Screen_SAPImplementacion_sapfuncional,Cover),
+                    "Migraciones Técnicas (Upgrade y Conversión)",
+                    Navigate('Screen_SAP_Implementacion-MigracionTecnica',Cover),
+                    "Migraciones Funcionales (Upgrade y Conversión)",
+                    Navigate(Screen2,Cover)
+                );
+                UpdateContext({_VarSapImp: "None"})
+                
+                
+                
+                
+                
+            OnSelect: = 
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddSap=5,true,
+                    false
+                )
+            Width: =275
+            X: =787
+            Y: =345
+            ZIndex: =25
+
+        Image14_16 As image:
+            Height: =53
+            Image: =Recurso_pinones
+            Tooltip: =
+            Width: =50
+            X: =1070
+            Y: =330
+            ZIndex: =26
+
+    "'GServ-admon' As group":
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =33
+
+        Button2_118 As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddSap,3)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Servicios Administrados"
+            Width: =210
+            X: =377
+            Y: =510
+            ZIndex: =18
+
+        DD_SapAdmon As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="SAP",ServiciosN1="Servicios Administrados"),ServiciosN2)
+            OnChange: |-
+                =UpdateContext({_VarSapAdmon: DD_SapAdmon.Selected.Result});
+                Switch(
+                    _VarSapAdmon,
+                    "SAP Técnico",
+                    Navigate(Screen_SAPServiAdmin_saptecnico,Cover),
+                    "SAP Funcional",
+                    Navigate(Screen2,Cover),
+                    "SAP Desarrollo",
+                    Navigate(Screen2,Cover),
+                    "Configuración escenarios Solution Manager",
+                    Navigate(Screen2,Cover)
+                );
+                UpdateContext({_VarSapAdmon: "None"})
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddSap=3,true,
+                    false
+                )
+            Width: =275
+            X: =587
+            Y: =533
+            ZIndex: =19
+
+        Image14_23 As image:
+            Height: =40
+            Image: ='Recurso 34_1'
+            Width: =42
+            X: =387
+            Y: =534
+            ZIndex: =20
+
+    G_Pcm As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =34
+
+        Button2_117 As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddSap,2)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="PMC"
+            Width: =210
+            X: =320
+            Y: =322
+            ZIndex: =15
+
+        DD_Hec_1 As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="SAP",ServiciosN1="SAP PMC"),ServiciosN2)
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddSap=2,true,
+                    false
+                )
+            Width: =275
+            X: =530
+            Y: =345
+            ZIndex: =16
+
+        Image14_17 As image:
+            Height: =33
+            Image: ='Recurso 35_1'
+            Width: =25
+            X: =349
+            Y: =350
+            ZIndex: =17
+
+    Iconos_Navegacion As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =46
+
+        Icon5_9 As icon.Home:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =30
+            Icon: =Icon.Home
+            OnSelect: =Navigate(Screen2)
+            Tooltip: ="Inicio"
+            Width: =30
+            X: =1380
+            Y: =30
+            ZIndex: =2
+
+        Icon6_12 As icon.Reset:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =30
+            Icon: =Icon.Reset
+            OnSelect: =Navigate(Screen2,CoverRight)
+            Tooltip: ="Regresar"
+            Width: =30
+            X: =1380
+            Y: =100
+            ZIndex: =3
+
+    G_Hec As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =48
+
+        Button2_81 As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddSap,1)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="HEC"
+            Width: =210
+            X: =387
+            Y: =109
+            ZIndex: =4
+
+        Image14_21 As image:
+            Height: =41
+            Image: ='Recurso 33_1'
+            Width: =48
+            X: =415
+            Y: =138
+            ZIndex: =12
+
+        DD_Hec As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="SAP",ServiciosN1="SAP HEC"),ServiciosN2)
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddSap=1,true,
+                    false
+                )
+            Width: =275
+            X: =597
+            Y: =132
+            ZIndex: =14
+

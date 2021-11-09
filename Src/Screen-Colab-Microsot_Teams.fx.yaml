@@ -1,0 +1,409 @@
+"'Screen-Colab-Microsot_Teams' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCOLABORACION%252fPDF%252fTelco_Teams_Caracterizacion_Servicio.pdf")
+        ;Set(_verBotonBlanco_MicTeams1,false);Set(_verBotonBlanco_MicTeams2,true);Set(_verBotonBlanco_MicTeams3,true);Set(_verBotonBlanco_MicTeams4,true);Set(_verBotonBlanco_MicTeams5,true)
+        ;Set(_verBotonRojo_MicTeams1,true);Set(_verBotonRojo_MicTeams2,false);Set(_verBotonRojo_MicTeams3,false);Set(_verBotonRojo_MicTeams4,false);Set(_verBotonRojo_MicTeams5,false)
+    Width: =1440
+
+    URL_pdf_17 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =221
+        ZIndex: =1
+
+    Rectangle1_25 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =620
+        Width: =206
+        Y: =80
+        ZIndex: =2
+
+    Icon5_27 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =25
+        X: =1412
+        Y: =70
+        ZIndex: =8
+
+    Icon6_29 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_COLABORACION,ScreenTransition.CoverRight)
+        Tooltip: ="Regresar"
+        Width: =21
+        X: =1412
+        Y: =114
+        ZIndex: =9
+
+    PdfViewer1_17 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_17.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =700
+        ShowControls: =true
+        Width: =1196
+        X: =206
+        ZIndex: =11
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_17 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =177
+        X: =14
+        Y: =5
+        ZIndex: =12
+
+    Image25_17 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =13
+
+    Label6_31 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =21
+        Size: =14
+        Text: ="MICROSOFT TEAMS"
+        Width: =186
+        X: =10
+        Y: =148
+        ZIndex: =18
+
+    Image10_20 As image:
+        Height: =26
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =26
+        X: =1410
+        Y: =154
+        ZIndex: =23
+
+    Label6_30 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =26
+        Size: =18
+        Text: ="CONECTIVIDAD"
+        Width: =200
+        X: =6
+        Y: =114
+        ZIndex: =26
+
+    botonesBlancos_MicroTeams As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =31
+
+        Button2_187 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCOLABORACION%252fPDF%252fTelco_Teams_Caracterizacion_Servicio.pdf")
+                ;Set(_verBotonBlanco_MicTeams1,false);Set(_verBotonBlanco_MicTeams2,true);Set(_verBotonBlanco_MicTeams3,true);Set(_verBotonBlanco_MicTeams4,true);Set(_verBotonBlanco_MicTeams5,true)
+                ;Set(_verBotonRojo_MicTeams1,true);Set(_verBotonRojo_MicTeams2,false);Set(_verBotonRojo_MicTeams3,false);Set(_verBotonRojo_MicTeams4,false);Set(_verBotonRojo_MicTeams5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonBlanco_MicTeams1
+            Width: =150
+            X: =20
+            Y: =210
+            ZIndex: =3
+
+        Button2_216 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCOLABORACION%252fPDF%252fTelco_Teams_Catalogo_Tecnico.pdf")
+                ;Set(_verBotonBlanco_MicTeams1,true);Set(_verBotonBlanco_MicTeams2,false);Set(_verBotonBlanco_MicTeams3,true);Set(_verBotonBlanco_MicTeams4,true);Set(_verBotonBlanco_MicTeams5,true)
+                ;Set(_verBotonRojo_MicTeams1,false);Set(_verBotonRojo_MicTeams2,true);Set(_verBotonRojo_MicTeams3,false);Set(_verBotonRojo_MicTeams4,false);Set(_verBotonRojo_MicTeams5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonBlanco_MicTeams2
+            Width: =150
+            X: =20
+            Y: =257
+            ZIndex: =27
+
+        Button2_217 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf")
+                ;Set(_verBotonBlanco_MicTeams1,true);Set(_verBotonBlanco_MicTeams2,true);Set(_verBotonBlanco_MicTeams3,false);Set(_verBotonBlanco_MicTeams4,true);Set(_verBotonBlanco_MicTeams5,true)
+                ;Set(_verBotonRojo_MicTeams1,false);Set(_verBotonRojo_MicTeams2,false);Set(_verBotonRojo_MicTeams3,true);Set(_verBotonRojo_MicTeams4,false);Set(_verBotonRojo_MicTeams5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Gestión de Configuración"
+            Visible: =_verBotonBlanco_MicTeams3
+            Width: =150
+            X: =20
+            Y: =304
+            ZIndex: =28
+
+        Button2_218 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf")
+                ;Set(_verBotonBlanco_MicTeams1,true);Set(_verBotonBlanco_MicTeams2,true);Set(_verBotonBlanco_MicTeams3,true);Set(_verBotonBlanco_MicTeams4,false);Set(_verBotonBlanco_MicTeams5,true)
+                ;Set(_verBotonRojo_MicTeams1,false);Set(_verBotonRojo_MicTeams2,false);Set(_verBotonRojo_MicTeams3,false);Set(_verBotonRojo_MicTeams4,true);Set(_verBotonRojo_MicTeams5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Modelo Operación Servico"
+            Visible: =_verBotonBlanco_MicTeams4
+            Width: =150
+            X: =20
+            Y: =351
+            ZIndex: =29
+
+        Button2_219 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf")
+                ;Set(_verBotonBlanco_MicTeams1,true);Set(_verBotonBlanco_MicTeams2,true);Set(_verBotonBlanco_MicTeams3,true);Set(_verBotonBlanco_MicTeams4,true);Set(_verBotonBlanco_MicTeams5,false)
+                ;Set(_verBotonRojo_MicTeams1,false);Set(_verBotonRojo_MicTeams2,false);Set(_verBotonRojo_MicTeams3,false);Set(_verBotonRojo_MicTeams4,false);Set(_verBotonRojo_MicTeams5,true)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonBlanco_MicTeams5
+            Width: =150
+            X: =20
+            Y: =400
+            ZIndex: =30
+
+    botonesRojos_MicroTeams As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =35
+
+        Button2_188 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonRojo_MicTeams1
+            Width: =150
+            X: =20
+            Y: =210
+            ZIndex: =20
+
+        Button2_220 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonRojo_MicTeams2
+            Width: =150
+            X: =20
+            Y: =257
+            ZIndex: =31
+
+        Button2_221 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Gestión de Configuración"
+            Visible: =_verBotonRojo_MicTeams3
+            Width: =150
+            X: =20
+            Y: =304
+            ZIndex: =32
+
+        Button2_222 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Modelo Operación Servico"
+            Visible: =_verBotonRojo_MicTeams4
+            Width: =150
+            X: =20
+            Y: =351
+            ZIndex: =33
+
+        Button2_223 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonRojo_MicTeams5
+            Width: =150
+            X: =20
+            Y: =400
+            ZIndex: =34
+

@@ -1,0 +1,368 @@
+"'Screen_SAP_Implementacion-MigracionTecnica' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fMIGRACION_TECNICA%252fSAP-MIG-TEC-Caracterización_Servicio.pdf")
+        ;Set(_verBotonBlanco_SAP_Migratecnica1,false);Set(_verBotonBlanco_SAP_Migratecnica2,true);Set(_verBotonBlanco_SAP_Migratecnica3,true);Set(_verBotonBlanco_SAP_Migratecnica4,true);Set(_verBotonBlanco_SAP_Migratecnica5,true)
+        ;Set(_verBotonRojo_SAP_Migratecnica1,true);Set(_verBotonRojo_SAP_Migratecnica2,false);Set(_verBotonRojo_SAP_Migratecnica3,false);Set(_verBotonRojo_SAP_Migratecnica4,false);Set(_verBotonRojo_SAP_Migratecnica5,false)
+    Width: =1440
+
+    URL_pdf_31 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =180
+        Size: =14
+        Text: =_URLpdf
+        Width: =189
+        ZIndex: =1
+
+    Rectangle1_39 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =617
+        Width: =189
+        Y: =82
+        ZIndex: =2
+
+    PdfViewer1_31 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_31.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =700
+        ShowControls: =true
+        Width: =1214
+        X: =189
+        ZIndex: =8
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_31 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =183
+        X: =6
+        Y: =7
+        ZIndex: =9
+
+    Image25_31 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =10
+
+    Iconos_navegacion_4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        Icon5_41 As icon.Home:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =26
+            Icon: =Icon.Home
+            OnSelect: =Navigate(Screen2)
+            Tooltip: ="Inicio"
+            Width: =25
+            X: =1412
+            Y: =70
+            ZIndex: =6
+
+        Icon6_43 As icon.Reset:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =26
+            Icon: =Icon.Reset
+            OnSelect: |-
+                =Set(var_ddSap,0);
+                Navigate(Screen_SAP,CoverRight)
+            Tooltip: ="Regresar"
+            Width: =21
+            X: =1412
+            Y: =114
+            ZIndex: =7
+
+        Image10_35 As image:
+            Height: =26
+            Image: =mailbox
+            OnSelect: =Navigate(Contacto)
+            Width: =26
+            X: =1410
+            Y: =154
+            ZIndex: =16
+
+    "'botonesRojos-MigracionTecnica' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =19
+
+        Button2_153 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonRojo_SAP_Migratecnica1
+            Width: =150
+            X: =19
+            Y: =267
+            ZIndex: =13
+
+        Button2_243 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonRojo_SAP_Migratecnica2
+            Width: =150
+            X: =19
+            Y: =315
+            ZIndex: =14
+
+        Button2_247 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Operación"
+            Visible: =_verBotonRojo_SAP_Migratecnica3
+            Width: =150
+            X: =19
+            Y: =363
+            ZIndex: =15
+
+        Button2_248 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonRojo_SAP_Migratecnica4
+            Width: =150
+            X: =19
+            Y: =411
+            ZIndex: =17
+
+    Group2_13 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =20
+
+        Label6_69 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =93
+            Size: =14
+            Text: ="MIGRACIONES TÉCNICAS  (Upgrade y Conversión)"
+            Width: =179
+            X: =10
+            Y: =145
+            ZIndex: =11
+
+        Label11_16 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(68, 68, 68, 1)
+            Height: =29
+            Size: =26
+            Text: ="SAP"
+            Width: =90
+            X: =62
+            Y: =106
+            ZIndex: =12
+
+    "'botonesBlancos-MigracionTecnica' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        Button2_152 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fMIGRACION_TECNICA%252fSAP-MIG-TEC-Caracterización_Servicio.pdf")
+                ;Set(_verBotonBlanco_SAP_Migratecnica1,false);Set(_verBotonBlanco_SAP_Migratecnica2,true);Set(_verBotonBlanco_SAP_Migratecnica3,true);Set(_verBotonBlanco_SAP_Migratecnica4,true);Set(_verBotonBlanco_SAP_Migratecnica5,true)
+                ;Set(_verBotonRojo_SAP_Migratecnica1,true);Set(_verBotonRojo_SAP_Migratecnica2,false);Set(_verBotonRojo_SAP_Migratecnica3,false);Set(_verBotonRojo_SAP_Migratecnica4,false);Set(_verBotonRojo_SAP_Migratecnica5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonBlanco_SAP_Migratecnica1
+            Width: =150
+            X: =19
+            Y: =267
+            ZIndex: =3
+
+        Button2_242 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fMIGRACION_TECNICA%252fSAP_MIG_TEC_Catalogo_Tecnico.pdf")
+                ;Set(_verBotonBlanco_SAP_Migratecnica1,true);Set(_verBotonBlanco_SAP_Migratecnica2,false);Set(_verBotonBlanco_SAP_Migratecnica3,true);Set(_verBotonBlanco_SAP_Migratecnica4,true);Set(_verBotonBlanco_SAP_Migratecnica5,true)
+                ;Set(_verBotonRojo_SAP_Migratecnica1,false);Set(_verBotonRojo_SAP_Migratecnica2,true);Set(_verBotonRojo_SAP_Migratecnica3,false);Set(_verBotonRojo_SAP_Migratecnica4,false);Set(_verBotonRojo_SAP_Migratecnica5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonBlanco_SAP_Migratecnica2
+            Width: =150
+            X: =19
+            Y: =315
+            ZIndex: =4
+
+        Button2_246 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fMIGRACION_TECNICA%252fSAP_MIG_TEC_Modelo_Operacion.pdf")
+                ;Set(_verBotonBlanco_SAP_Migratecnica1,true);Set(_verBotonBlanco_SAP_Migratecnica2,true);Set(_verBotonBlanco_SAP_Migratecnica3,false);Set(_verBotonBlanco_SAP_Migratecnica4,true);Set(_verBotonBlanco_SAP_Migratecnica5,true)
+                ;Set(_verBotonRojo_SAP_Migratecnica1,false);Set(_verBotonRojo_SAP_Migratecnica2,false);Set(_verBotonRojo_SAP_Migratecnica3,true);Set(_verBotonRojo_SAP_Migratecnica4,false);Set(_verBotonRojo_SAP_Migratecnica5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Operación"
+            Visible: =_verBotonBlanco_SAP_Migratecnica3
+            Width: =150
+            X: =19
+            Y: =363
+            ZIndex: =5
+
+        Button2_249 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fMIGRACION_TECNICA%252fSAP_MIG_TEC_Modelo_Costos.pdf")
+                ;Set(_verBotonBlanco_SAP_Migratecnica1,true);Set(_verBotonBlanco_SAP_Migratecnica2,true);Set(_verBotonBlanco_SAP_Migratecnica3,true);Set(_verBotonBlanco_SAP_Migratecnica4,false);Set(_verBotonBlanco_SAP_Migratecnica5,true)
+                ;Set(_verBotonRojo_SAP_Migratecnica1,false);Set(_verBotonRojo_SAP_Migratecnica2,false);Set(_verBotonRojo_SAP_Migratecnica3,false);Set(_verBotonRojo_SAP_Migratecnica4,true);Set(_verBotonRojo_SAP_Migratecnica5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonBlanco_SAP_Migratecnica4
+            Width: =150
+            X: =19
+            Y: =411
+            ZIndex: =19
+

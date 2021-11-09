@@ -1,0 +1,6 @@
+App As appinfo:
+    BackEnabled: =false
+    MinScreenHeight: =850
+    MinScreenWidth: =1440
+    SizeBreakpoints: =
+

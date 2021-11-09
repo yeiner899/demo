@@ -1,0 +1,34 @@
+Contacto As screen:
+    Fill: =RGBA(0, 0, 0, 1)
+    Height: =700
+    OnVisible: =Set(_URLpdf,"Documentos%2bcompartidos%252fPDF_servicios%252fContactV3.pdf")
+    Width: =1440
+
+    Icon7_4 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Width: =30
+        X: =1388
+        Y: =69
+        ZIndex: =3
+
+    Icon8_1 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Inicio)
+        Width: =30
+        X: =1388
+        Y: =134
+        ZIndex: =4
+
+    Image23 As image:
+        Height: =621
+        Image: =Contacto2
+        Width: =1356
+        X: =3
+        Y: =33
+        ZIndex: =5
+

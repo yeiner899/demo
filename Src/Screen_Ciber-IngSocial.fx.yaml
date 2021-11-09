@@ -1,0 +1,491 @@
+"'Screen_Ciber-IngSocial' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |
+        =Set(
+            _URLpdf,
+            "Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fANALISIS_DE_INGENIERIA_SOCIAL_EN_CIBERSEGURIDAD%252fCaracterizacion_del_Servicio_Analisis_de_Ingenieria_Social_en_Ciberseguridad.pdf"
+        );
+        Set(
+            _verBotonBlancoIngsocial1,
+            false
+        );
+        Set(
+            _verBotonBlancoIngsocial2,
+            true
+        );
+        Set(
+            _verBotonBlancoIngsocial3,
+            true
+        );
+        Set(
+            _verBotonBlancoIngsocial4,
+            true
+        );
+        Set(
+            _verBotonBlancoIngsocial5,
+            true
+        );
+        Set(
+            _verBotonRojoIngsocial1,
+            true
+        );
+        Set(
+            _verBotonRojoIngsocial2,
+            false
+        );
+        Set(
+            _verBotonRojoIngsocial3,
+            false
+        );
+        Set(
+            _verBotonRojoIngsocial4,
+            false
+        );
+        Set(
+            _verBotonRojoIngsocial5,
+            false
+        )
+    Width: =1440
+
+    URL_pdf_40 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =221
+        ZIndex: =1
+
+    Rectangle1_48 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =620
+        Width: =189
+        Y: =80
+        ZIndex: =2
+
+    Icon5_50 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =25
+        X: =1412
+        Y: =70
+        ZIndex: =8
+
+    Icon6_52 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_CIBERSEGURIDAD,CoverRight)
+        Tooltip: ="Regresar"
+        Width: =21
+        X: =1412
+        Y: =114
+        ZIndex: =9
+
+    PdfViewer1_38 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_40.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =700
+        ShowControls: =true
+        Width: =1214
+        X: =189
+        ZIndex: =11
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_40 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =153
+        X: =6
+        Y: =7
+        ZIndex: =12
+
+    Image25_40 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =13
+
+    Image10_44 As image:
+        Height: =26
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =26
+        X: =1410
+        Y: =154
+        ZIndex: =23
+
+    Label6_89 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =66
+        Size: =19
+        Text: ="CIBER SEGURIDAD"
+        Width: =178
+        X: =6
+        Y: =99
+        ZIndex: =26
+
+    botonesBlancosIngsocial As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =31
+
+        ButtonBlanco1_2_134 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =34
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(
+                    _URLpdf,
+                    "Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fANALISIS_DE_INGENIERIA_SOCIAL_EN_CIBERSEGURIDAD%252fCaracterizacion_del_Servicio_Analisis_de_Ingenieria_Social_en_Ciberseguridad.pdf"
+                );
+                Set(
+                    _verBotonBlancoIngsocial1,
+                    false
+                );
+                Set(
+                    _verBotonBlancoIngsocial2,
+                    true
+                );
+                Set(
+                    _verBotonBlancoIngsocial3,
+                    true
+                );
+                Set(
+                    _verBotonBlancoIngsocial4,
+                    true
+                );
+                Set(
+                    _verBotonBlancoIngsocial5,
+                    true
+                );
+                Set(
+                    _verBotonRojoIngsocial1,
+                    true
+                );
+                Set(
+                    _verBotonRojoIngsocial2,
+                    false
+                );
+                Set(
+                    _verBotonRojoIngsocial3,
+                    false
+                );
+                Set(
+                    _verBotonRojoIngsocial4,
+                    false
+                );
+                Set(
+                    _verBotonRojoIngsocial5,
+                    false
+                )
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonBlancoIngsocial1
+            Width: =150
+            X: =18
+            Y: =264
+            ZIndex: =3
+
+        ButtonBlanco2_2_136 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf")
+                ;Set(_verBotonBlancoIngsocial1,true);Set(_verBotonBlancoIngsocial2,false);Set(_verBotonBlancoIngsocial3,true);Set(_verBotonBlancoIngsocial4,true);Set(_verBotonBlancoIngsocial5,true)
+                ;Set(_verBotonRojoIngsocial1,false);Set(_verBotonRojoIngsocial2,true);Set(_verBotonRojoIngsocial3,false);Set(_verBotonRojoIngsocial4,false);Set(_verBotonRojoIngsocial5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonBlancoIngsocial2
+            Width: =150
+            X: =18
+            Y: =321
+            ZIndex: =4
+
+        ButtonBlanco4_2_198 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCIBERSEGURIDAD%252fPDF%252fANALISIS_DE_INGENIERIA_SOCIAL_EN_CIBERSEGURIDAD%252fModelo_Operacion_del_Servicio_Analisis_de_Ingenieria_Social_en_Ciberseguridad.pdf");Set(_verBotonBlancoIngsocial1, true );Set(_verBotonBlancoIngsocial2, true );Set(_verBotonBlancoIngsocial3, true );Set(_verBotonBlancoIngsocialIngsocial4, false );Set(_verBotonBlancoIngsocial5,true)
+                ;Set(_verBotonRojoIngsocial1, false );Set(_verBotonRojoIngsocial2, false );Set(_verBotonRojoIngsocial3, false );Set(_verBotonRojoIngsocial4, true );Set(_verBotonRojoIngsocial5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo Operación Servicio"
+            Visible: =_verBotonBlancoIngsocial4
+            Width: =150
+            X: =18
+            Y: =429
+            ZIndex: =27
+
+        ButtonBlanco5_2_187 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf")
+                ;Set(_verBotonBlancoIngsocial1,true);Set(_verBotonBlancoIngsocial2,true);Set(_verBotonBlancoIngsocial3,true);Set(_verBotonBlancoIngsocial4,true);Set(_verBotonBlancoIngsocial5,false)
+                ;Set(_verBotonRojoIngsocial1,false);Set(_verBotonRojoIngsocial2,false);Set(_verBotonRojoIngsocial3,false);Set(_verBotonRojoIngsocial4,false);Set(_verBotonRojoIngsocial5,true)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonBlancoIngsocial5
+            Width: =150
+            X: =18
+            Y: =483
+            ZIndex: =29
+
+        ButtonBlanco4_2_197 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf");
+                Set(_verBotonBlancoIngsocial1, true );Set(_verBotonBlancoIngsocial2, true );Set(_verBotonBlancoIngsocial3, false );Set(_verBotonBlancoIngsocial4, true );Set(_verBotonBlancoIngsocial5,true)
+                ;Set(_verBotonRojoIngsocial1, false );Set(_verBotonRojoIngsocial2, false );Set(_verBotonRojoIngsocial3, true );Set(_verBotonRojoIngsocial4, false );Set(_verBotonRojoIngsocial5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestión de la Configuración"
+            Visible: =_verBotonBlancoIngsocial3
+            Width: =150
+            X: =18
+            Y: =375
+            ZIndex: =30
+
+    Label6_90 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =104
+        Size: =14
+        Text: ="ANÁLISIS DE INGENIERÍA SOCIAL EN CIBERSEGURIDAD"
+        Width: =166
+        X: =6
+        Y: =155
+        ZIndex: =32
+
+    botonesRojosIngsocial As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =32
+
+        ButtonRojo1_2_135 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonRojoIngsocial1
+            Width: =150
+            X: =18
+            Y: =267
+            ZIndex: =20
+
+        ButtonRojo2_173 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonRojoIngsocial2
+            Width: =150
+            X: =18
+            Y: =321
+            ZIndex: =21
+
+        ButtonRojo2_175 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo Operación Servicio"
+            Visible: =_verBotonRojoIngsocial4
+            Width: =150
+            X: =18
+            Y: =429
+            ZIndex: =22
+
+        ButtonRojo2_176 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modeo de Costos"
+            Visible: =_verBotonRojoIngsocial5
+            Width: =150
+            X: =18
+            Y: =483
+            ZIndex: =24
+
+        ButtonRojo2_174 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestion de la Configuración"
+            Visible: =_verBotonRojoIngsocial3
+            Width: =150
+            X: =18
+            Y: =375
+            ZIndex: =31
+

@@ -1,0 +1,680 @@
+Screen_CIBERSEGURIDAD As screen:
+    Fill: |+
+        =
+        
+    Height: =700
+    OnHidden: =
+    OnVisible: |-
+        =Set(var_ddciber,0);
+        Reset(DD_SegOfen);
+        Reset(DD_ProtAsegur);
+        Reset(DD_ArquitecturaIntegracion);
+        Reset(DD_GestionCOnsultoria);
+        Reset(DD_Csirt);
+        Reset(DD_InteligenciaAmenazas);
+    Width: =1440
+
+    Image21_8 As image:
+        Height: =700
+        Image: =Fondo_3b
+        ImagePosition: =ImagePosition.Fill
+        Width: =866
+        X: =574
+        ZIndex: =1
+
+    Icon5_31 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =30
+        X: =1350
+        Y: =47
+        ZIndex: =4
+
+    Icon6_33 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen2,CoverRight)
+        Tooltip: ="Regresar"
+        Width: =30
+        X: =1350
+        Y: =98
+        ZIndex: =5
+
+    Rectangle1_29 As rectangle:
+        Fill: =RGBA(68, 68, 68, 1)
+        Height: =700
+        Width: =264
+        ZIndex: =8
+
+    Label47_18 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        Size: =39
+        Text: ="GENERAL"
+        Width: =197
+        X: =30
+        Y: =205
+        ZIndex: =9
+
+    Label48_11 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =25
+        Size: =19
+        Text: ="INFORMACIÓN"
+        Width: =216
+        X: =34
+        Y: =179
+        ZIndex: =10
+
+    Label49_8 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =134
+        Italic: =true
+        Size: =14
+        Text: ="""Información sobre plataforma, componentes transversales, diseños técnicos y costos sobre los cuales se prestan los servicios."""
+        Width: =187
+        X: =32
+        Y: =269
+        ZIndex: =11
+
+    Button2_233 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =14
+        Text: ="CONSULTELO AQUÍ"
+        Width: =169
+        X: =47
+        Y: =421
+        ZIndex: =12
+
+    Image22_8 As image:
+        Height: =45
+        Image: ='Recurso 29_1'
+        Width: =46
+        X: =16
+        Y: =404
+        ZIndex: =13
+
+    Image11_11 As image:
+        Height: =54
+        Image: =Recurso_6
+        Width: =145
+        X: =59
+        Y: =20
+        ZIndex: =14
+
+    Image10_24 As image:
+        Height: =33
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =30
+        X: =1350
+        Y: =140
+        ZIndex: =15
+
+    Label9 As label:
+        Color: =RGBA(236, 36, 28, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =73
+        Size: =42
+        Text: ="CIBERSEGURIDAD"
+        Width: =473
+        X: =640
+        Y: =39
+        ZIndex: =16
+
+    G_SegOfen As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =31
+
+        B_SegOfen As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddciber,6)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Seguridad Ofensiva"
+            Width: =210
+            X: =1117
+            Y: =510
+            ZIndex: =28
+
+        DD_SegOfen As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="Ciberseguridad",ServiciosN1="Seguridad Ofensiva"),ServiciosN2)
+            OnChange: |
+                =UpdateContext({_VarSegOfen: DD_SegOfen.Selected.Result});
+                Switch(
+                    _VarSegOfen,
+                    "Análisis de Código",
+                    Navigate(Screen2,Cover),
+                    "Análisis y Gestión de Vulnerabilidades",
+                    Navigate('Screen_Ciber-AnalisisVulnerab',Cover),
+                    "Ethical Hacking",
+                    Navigate('Screen_Ciber-Ethicalhacking',Cover),
+                    "Análisis de Ingeniería social en Ciberseguridad",
+                    Navigate('Screen_Ciber-IngSocial',Cover),
+                    "Pruebas de Penetración Especializadas",
+                    Navigate(Screen2,Cover),
+                    "Red Team",
+                    Navigate(Screen2,Cover),
+                    "Simulación de CiberAtaques",
+                    Navigate(Screen2,Cover)
+                );
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddciber=6,true,
+                    false
+                )
+            Width: =275
+            X: =842
+            Y: =546
+            ZIndex: =29
+
+        Image14_46 As image:
+            Height: =33
+            Image: ='Recurso 33_1'
+            Width: =33
+            X: =1125
+            Y: =545
+            ZIndex: =30
+
+    G_ArquitecturaIntegracion As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =33
+
+        B_ArquitecturaIntegracion As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddciber,4)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Arquitectura e integraciones"
+            Width: =210
+            X: =381
+            Y: =98
+            ZIndex: =22
+
+        DD_ArquitecturaIntegracion As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="Ciberseguridad",ServiciosN1="Arquitectura e Integraciones"),ServiciosN2)
+            OnChange: |+
+                =Navigate(Screen2,Cover)
+                
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddciber=4,true,
+                    false
+                )
+            Width: =275
+            X: =591
+            Y: =125
+            ZIndex: =23
+
+        Image_audifonos As image:
+            Height: =33
+            Image: ='Recurso 38'
+            Width: =31
+            X: =395
+            Y: =126
+            ZIndex: =24
+
+    G_GestionConsult As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =35
+
+        B_GestionConsultoria As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddciber,3)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Gestión consultoría"
+            Width: =210
+            X: =302
+            Y: =291
+            ZIndex: =19
+
+        DD_GestionCOnsultoria As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="Ciberseguridad",ServiciosN1="Gestión Consultoría"),ServiciosN2)
+            OnChange: |
+                =UpdateContext({_VarGesCon: DD_GestionCOnsultoria.Selected.Result});
+                Switch(
+                    _VarGesCon,
+                    "Aseguramiento / Hardening",
+                    Navigate(Screen2,Cover),
+                    "Concientización y Capacitaciones",
+                    Navigate(Screen2,Cover),
+                    "Diagnostico / Assessment",
+                    Navigate(Screen2,Cover),
+                    "Gestión de auditorías de seguridad",
+                    Navigate(Screen2,Cover),
+                    "Gestión de la Seguridad TIC",
+                    Navigate(Screen2,Cover),
+                    "Gestión de Riesgos TIC",
+                    Navigate(Screen2,Cover),
+                    "Gestión de Vulnerabilidades TIC",
+                    Navigate(Screen2,Cover),
+                    "Prácticas y Cumplimiento",
+                    Navigate(Screen2,Cover),
+                    "Sistema de Gestión de Seguridad de la Información - SGSI",
+                    Navigate(Screen2,Cover)
+                );
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddciber=3,true,
+                    false
+                )
+            Width: =275
+            X: =513
+            Y: =320
+            ZIndex: =20
+
+        Image14_43 As image:
+            Height: =28
+            Image: ='Recurso 31_1'
+            Width: =32
+            X: =310
+            Y: =325
+            ZIndex: =21
+
+    G_ProtAsegur As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        B_ProtAsegur As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddciber,5)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Protección y aseguramiento"
+            Width: =210
+            X: =1154
+            Y: =300
+            ZIndex: =25
+
+        DD_ProtAsegur As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="Ciberseguridad",ServiciosN1="Protección y Aseguramiento"),ServiciosN2)
+            OnChange: |
+                =UpdateContext({_VarProtaseg: DD_ProtAsegur.Selected.Result});
+                Switch(
+                    _VarProtaseg,
+                    "Clean-Pipes (Anti Denegación de Servicios Distribuido-AntiDDoS)",
+                    Navigate('Screen_Ciber-Clean-Pipes',Cover),
+                    "Control de Accesos a Red - NAC",
+                    Navigate(Screen2,Cover),
+                    "Control de Navegación (Filtrado URL)",
+                    Navigate(Screen2,Cover),
+                    "Firewall Administrado",
+                    Navigate(Screen2,Cover),
+                    "Gestión de Identidades y usuarios (PIM, PAM)",
+                    Navigate(Screen2,Cover),
+                    "Gestión Unificada de Amenazas-UTM (Serv Seg centralizada clientes no DC)",
+                    Navigate(Screen2,Cover),
+                    "Multiple Factor de Autenticación-MFA",
+                    Navigate(Screen2,Cover),
+                    "Prevención de Fuga de Información - DLP",
+                    Navigate('Screen_Ciber-fugainfo',Cover),
+                    "Proxy Web",
+                    Navigate(Screen2,Cover),
+                    "Red Privada Virtual - VPN",
+                    Navigate(Screen2,Cover),
+                    "Red Privada Virtual - VPN Cloud",
+                    Navigate(Screen2,Cover),
+                    "Servicios de Seguridad Administrada para Bases de Datos (DAF)",
+                    Navigate(Screen2,Cover)
+                );
+                UpdateContext({_VarProtaseg: "None"})
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddciber=5,true,
+                    false
+                )
+            Width: =275
+            X: =879
+            Y: =336
+            ZIndex: =26
+
+        Image14_42 As image:
+            Height: =33
+            Image: ='Recurso 35_1'
+            Width: =29
+            X: =1170
+            Y: =332
+            ZIndex: =27
+
+    G_Inteligencia_Amenazas As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =43
+
+        Button2_235 As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddciber,1)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Inteligencia de amenazas"
+            Width: =210
+            X: =368
+            Y: =501
+            ZIndex: =6
+
+        Image14_45 As image:
+            Height: =28
+            Image: ='Recurso 32_1'
+            Width: =32
+            X: =382
+            Y: =541
+            ZIndex: =7
+
+        DD_InteligenciaAmenazas As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="Ciberseguridad",ServiciosN1="Inteligencia de amenazas"),ServiciosN2)
+            OnChange: |
+                =UpdateContext({_VarIAMenu: DD_InteligenciaAmenazas.Selected.Result});
+                Switch(
+                    _VarIAMenu,
+                    "Agente de Seguridad de Acceso a la Nube-CASB",
+                    Navigate(Screen2,Cover),
+                    "Análisis de Comportamiento de Red - NBA",
+                    Navigate(Screen2,Cover),
+                    "Análisis de comportamiento de usuarios y entidades - UEBA/UBA",
+                    Navigate(Screen2,Cover),
+                    "CiberInteligencia",
+                    Navigate(Screen2,Cover),
+                    "Anti-Malware (Servidores, EndPoint)",
+                    Navigate('Screen_Ciber-Anti-malware',Cover),
+                    "Analítica de Amenazas",
+                    Navigate(Screen2,Cover),
+                    "Correo Seguro (Anti-Spam & Gateway AntiVirus)",
+                    Navigate(Screen2,Cover),
+                    "Detección y Respuesta de EndPoints EDR",
+                    Navigate(Screen2,Cover),
+                    "Investigación de Ataques y APT",
+                    Navigate(Screen2,Cover),
+                    "Modelado de Tráfico (Admon BW) - NO CS",
+                    Navigate(Screen2,Cover),
+                    "Monitoreo de Amenazas (Red Profunda) - Sin catálogo",
+                    Navigate('Screen_Ciber-Inteligenciaamenazas-Monitoreo',Cover),
+                    "Sistema Preventión de Intrusos-IPS",
+                    Navigate(Screen2,Cover),
+                    "WAF Dedicado administrado",
+                    Navigate(Screen2,Cover)
+                );
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddciber=1,true,
+                    false
+                )
+            Width: =275
+            X: =578
+            Y: =528
+            ZIndex: =17
+
+    G_Csirt As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        B_Csirt As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddciber,2)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="CSIRT"
+            Width: =210
+            X: =1100
+            Y: =110
+            ZIndex: =2
+
+        Image14_38 As image:
+            Height: =31
+            Image: ='Recurso 36_1'
+            Width: =31
+            X: =1145
+            Y: =145
+            ZIndex: =3
+
+        DD_Csirt As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="Ciberseguridad",ServiciosN1="CSIRT"),ServiciosN2)
+            OnChange: |
+                =UpdateContext({_VarCsirt: DD_Csirt.Selected.Result});
+                Switch(
+                    _VarCsirt,
+                    "Investigación Forense de Ciberseguridad",
+                    Navigate(Screen2,Cover),
+                    "Automatización y respuesta de la orquestación de seguridad (SOAR)",
+                    Navigate(Screen2,Cover),
+                    "Blue Team",
+                    Navigate(Screen2,Cover),
+                    "CSIRT",
+                    Navigate(Screen2,Cover),
+                    "Detección proactiva (Correlación de Eventos - SIEM)",
+                    Navigate('Screen_Ciber-deteccion-proact',Cover),
+                    "Respuesta y contención a incidentes Ciberseguridad",
+                    Navigate('Screen_Ciber-rtacontencionincidentes',Cover)
+                );
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddciber=2,true,
+                    false
+                )
+            Width: =275
+            X: =825
+            Y: =143
+            ZIndex: =18
+

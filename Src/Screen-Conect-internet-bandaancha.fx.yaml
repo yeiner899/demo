@@ -1,0 +1,364 @@
+"'Screen-Conect-internet-bandaancha' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCONECTIVIDAD%252fPDF%252fCaracterizacion del servicio Telco Internet Banda Ancha.pdf")
+        ;Set(_verBotonBlancoBandaancha1,false);Set(_verBotonBlancoBandaancha2,true);Set(_verBotonBlancoBandaancha3,true);Set(_verBotonBlancoBandaancha4,true);Set(_verBotonBlancoBandaancha5,true)
+        ;Set(_verBotonRojoBandaancha1,true);Set(_verBotonRojoBandaancha2,false);Set(_verBotonRojoBandaancha3,false);Set(_verBotonRojoBandaancha4,false);Set(_verBotonRojoBandaancha5,false)
+    Width: =1440
+
+    URL_pdf_36 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =184
+        ZIndex: =1
+
+    Rectangle1_44 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =620
+        Width: =203
+        Y: =80
+        ZIndex: =2
+
+    Icon5_46 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =25
+        X: =1412
+        Y: =70
+        ZIndex: =8
+
+    Icon6_48 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen_CONECTIVIDAD,ScreenTransition.CoverRight)
+        Tooltip: ="Regresar"
+        Width: =21
+        X: =1412
+        Y: =114
+        ZIndex: =9
+
+    PdfViewer1_35 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_36.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =700
+        ShowControls: =true
+        Width: =1200
+        X: =203
+        ZIndex: =11
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_36 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =178
+        X: =6
+        Y: =7
+        ZIndex: =12
+
+    Image25_36 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =13
+
+    Label6_80 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =26
+        Size: =16
+        Text: ="INTERNET"
+        Width: =126
+        X: =33
+        Y: =140
+        ZIndex: =18
+
+    Image10_40 As image:
+        Height: =26
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =26
+        X: =1410
+        Y: =154
+        ZIndex: =23
+
+    Label6_76 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =26
+        Size: =18
+        Text: ="CONECTIVIDAD"
+        Width: =197
+        X: =6
+        Y: =114
+        ZIndex: =26
+
+    Label6_82 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =53
+        Size: =14
+        Text: ="Internet Banda Ancha"
+        Width: =159
+        X: =25
+        Y: =164
+        ZIndex: =27
+
+    botonesRojosBandaancha As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =31
+
+        Button2_277 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonRojoBandaancha1
+            Width: =150
+            X: =20
+            Y: =238
+            ZIndex: =20
+
+        Button2_279 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonRojoBandaancha2
+            Width: =150
+            X: =20
+            Y: =291
+            ZIndex: =21
+
+        Button2_280 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestión de Configuración"
+            Visible: =_verBotonRojoBandaancha3
+            Width: =150
+            X: =20
+            Y: =344
+            ZIndex: =28
+
+        Button2_283 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Operación"
+            Visible: =_verBotonRojoBandaancha4
+            Width: =150
+            X: =26
+            Y: =397
+            ZIndex: =29
+
+    BotonesBlancosBandaancha As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =34
+
+        Button2_276 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCONECTIVIDAD%252fPDF%252fCaracterizacion del servicio Telco Internet Banda Ancha.pdf")
+                ;Set(_verBotonBlancoBandaancha1,false);Set(_verBotonBlancoBandaancha2,true);Set(_verBotonBlancoBandaancha3,true);Set(_verBotonBlancoBandaancha4,true);Set(_verBotonBlancoBandaancha5,true)
+                ;Set(_verBotonRojoBandaancha1,true);Set(_verBotonRojoBandaancha2,false);Set(_verBotonRojoBandaancha3,false);Set(_verBotonRojoBandaancha4,false);Set(_verBotonRojoBandaancha5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonBlancoBandaancha1
+            Width: =150
+            X: =20
+            Y: =238
+            ZIndex: =3
+
+        Button2_278 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCONECTIVIDAD%252fPDF%252fCatalogo Tecnico Telco Internet Banda Ancha.pdf")
+                ;Set(_verBotonBlancoBandaancha1,true);Set(_verBoton_BlancoMetroEthernet2,false);Set(_verBotonBlancoBandaancha3,true);Set(_verBotonBlancoBandaancha4,true)
+                ;Set(_verBotonRojoBandaancha1,false);Set(_verBotonRojoBandaancha2,true);Set(_verBotonRojoBandaancha3,false);Set(_verBotonRojoBandaancha4,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonBlancoBandaancha2
+            Width: =150
+            X: =20
+            Y: =291
+            ZIndex: =4
+
+        Button2_281 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCONECTIVIDAD%252fPDF%252fGestion de configuracion Telco Internet Banda Ancha.pdf")
+                ;Set(_verBotonBlancoBandaancha1,true);Set(_verBoton_BlancoMetroEthernet2,true);Set(_verBotonBlancoBandaancha3,false);Set(_verBotonBlancoBandaancha4,true)
+                ;Set(_verBotonRojoBandaancha1,false);Set(_verBotonRojoBandaancha2,false);Set(_verBotonRojoBandaancha3,true);Set(_verBotonRojoBandaancha4,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestión de Configuración"
+            Visible: =_verBotonBlancoBandaancha3
+            Width: =150
+            X: =20
+            Y: =344
+            ZIndex: =31
+
+        Button2_282 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCONECTIVIDAD%252fPDF%252fModelo_Operativo_Internet Banda Ancha.pdf")
+                ;Set(_verBotonBlancoBandaancha1,true);Set(_verBoton_BlancoMetroEthernet2,true);Set(_verBotonBlancoBandaancha3,true);Set(_verBotonBlancoBandaancha4,false)
+                ;Set(_verBotonRojoBandaancha1,false);Set(_verBotonRojoBandaancha2,false);Set(_verBotonRojoBandaancha3,false);Set(_verBotonRojoBandaancha4,true)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Operación"
+            Visible: =_verBotonBlancoBandaancha4
+            Width: =150
+            X: =20
+            Y: =397
+            ZIndex: =32
+

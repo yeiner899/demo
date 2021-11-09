@@ -1,0 +1,304 @@
+Screen_COLABORACION As screen:
+    Fill: =
+    Height: =700
+    OnVisible: |-
+        =Set(var_ddColab,0);
+        Reset(DD_Teams);
+        Reset(DD_Comunificadas)
+    Width: =1440
+
+    Image21_6 As image:
+        Height: =700
+        Image: =Fondo_3b
+        ImagePosition: =ImagePosition.Fill
+        Width: =866
+        X: =574
+        ZIndex: =1
+
+    Rectangle1_18 As rectangle:
+        Fill: =RGBA(68, 68, 68, 1)
+        Height: =700
+        Width: =264
+        ZIndex: =33
+
+    Label47_15 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        Size: =39
+        Text: ="GENERAL"
+        Width: =197
+        X: =30
+        Y: =205
+        ZIndex: =34
+
+    Label48_9 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =25
+        Size: =19
+        Text: ="INFORMACIÓN"
+        Width: =216
+        X: =34
+        Y: =179
+        ZIndex: =35
+
+    Label49_6 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =134
+        Italic: =true
+        Size: =14
+        Text: ="""Información sobre plataforma, componentes transversales, diseños técnicos y costos sobre los cuales se prestan los servicios."""
+        Width: =187
+        X: =32
+        Y: =269
+        ZIndex: =36
+
+    Button2_148 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =14
+        Text: ="CONSULTELO AQUÍ"
+        Width: =169
+        X: =47
+        Y: =421
+        ZIndex: =37
+
+    Image22_6 As image:
+        Height: =45
+        Image: ='Recurso 29_1'
+        Width: =46
+        X: =16
+        Y: =404
+        ZIndex: =38
+
+    Image11_9 As image:
+        Height: =54
+        Image: =Recurso_6
+        Width: =145
+        X: =59
+        Y: =20
+        ZIndex: =39
+
+    Label47_14 As label:
+        Color: =RGBA(80, 80, 80, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =69
+        Size: =50
+        Text: ="COLABORACIÓN"
+        Width: =437
+        X: =378
+        Y: =154
+        ZIndex: =41
+
+    Navegar_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =42
+
+        Icon5_20 As icon.Home:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =30
+            Icon: =Icon.Home
+            OnSelect: =Navigate(Screen2)
+            Tooltip: ="Inicio"
+            Width: =47
+            X: =1365
+            Y: =47
+            ZIndex: =18
+
+        Icon6_22 As icon.Reset:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =30
+            Icon: =Icon.Reset
+            OnSelect: =Navigate(Screen2)
+            Tooltip: ="Regresar"
+            Width: =47
+            X: =1365
+            Y: =98
+            ZIndex: =19
+
+        Image10_14 As image:
+            Height: =33
+            Image: =mailbox
+            OnSelect: =Navigate(Contacto)
+            Width: =47
+            X: =1365
+            Y: =140
+            ZIndex: =40
+
+    G_ComUnificadas As group:
+        Height: =5
+        Width: =5
+        X: =-688
+        Y: =40
+        ZIndex: =45
+
+        B_Comunificadas As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddColab,1)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Comunicaciones Unificadas"
+            Width: =210
+            X: =1195
+            Y: =266
+            ZIndex: =42
+
+        DD_Comunificadas As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: |-
+                =Distinct(
+                    Filter(
+                        Lista_familias,
+                        Title = "Colaboración",
+                        ServiciosN1 = "Comunicaciones Unificadas"
+                    ),
+                    ServiciosN2
+                )
+            OnChange: =Navigate(Screen2,Cover)
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddColab=1,true,
+                    false
+                )
+            Width: =275
+            X: =920
+            Y: =300
+            ZIndex: =43
+
+        Image14_62 As image:
+            Height: =33
+            Image: ='Recurso 35_1'
+            Width: =29
+            X: =1210
+            Y: =305
+            ZIndex: =44
+
+    G_Teams As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =49
+
+        B_Teams As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddColab,2)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Microsoft Teams"
+            Width: =210
+            X: =310
+            Y: =395
+            ZIndex: =46
+
+        Image14_63 As image:
+            Height: =28
+            Image: ='Recurso 31_1'
+            Width: =32
+            X: =315
+            Y: =429
+            ZIndex: =47
+
+        DD_Teams As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: |-
+                =Distinct(
+                    Filter(
+                        Lista_familias,
+                        Title = "Colaboración",
+                        ServiciosN1 = "Microsoft Teams"
+                    ),
+                    ServiciosN2
+                )
+            OnChange: |
+                =Navigate('Screen-Colab-Microsot_Teams',Cover)
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddColab=2,true,
+                    false
+                )
+            Width: =275
+            X: =520
+            Y: =416
+            ZIndex: =48
+

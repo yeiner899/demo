@@ -1,0 +1,145 @@
+Inicio As screen:
+    Height: =700
+    Width: =1440
+
+    Image2 As image:
+        Height: =700
+        Image: =fondo_1
+        ImagePosition: =ImagePosition.Fill
+        Width: =1440
+        ZIndex: =1
+
+    Label3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Size: =31
+        Text: ="HOLA"
+        Width: =322
+        X: =899
+        Y: =166
+        ZIndex: =2
+
+    Label3_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =47
+        Size: =22
+        Text: ="¡Tú lo puedes todo!"
+        Width: =326
+        X: =868
+        Y: =240
+        ZIndex: =4
+
+    Button1 As button:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.Arial
+        FontWeight: =FontWeight.Normal
+        Height: =35
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -10%)
+        OnSelect: =Navigate(Screen2)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =12
+        Text: ="Conoce el portafolio de servicios E&N"
+        Width: =350
+        X: =929
+        Y: =293
+        ZIndex: =5
+
+    Image12 As image:
+        Height: =80
+        Image: =Recurso_4
+        Width: =275
+        X: =41
+        Y: =40
+        ZIndex: =6
+
+    Image15 As image:
+        Height: =31
+        Image: ='Recurso 29'
+        Width: =47
+        X: =882
+        Y: =287
+        ZIndex: =7
+
+    Label10 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =54
+        Size: =22
+        Text: =User().FullName
+        Width: =530
+        X: =899
+        Y: =206
+        ZIndex: =8
+
+    Label50 As label:
+        Height: =70
+        Size: =21
+        Text: =
+        Width: =560
+        X: =591
+        Y: =94
+        ZIndex: =9
+
+    Button1_1 As button:
+        Align: =Align.Left
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(249, 112, 0, 1)
+        Font: =Font.Arial
+        FontWeight: =FontWeight.Normal
+        Height: =34
+        HoverFill: =ColorFade(RGBA(251, 177, 111, 1), -10%)
+        OnSelect: =Navigate(Contacto)
+        PaddingLeft: =16
+        PressedColor: =RGBA(0, 0, 0, 1)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =12
+        Text: ="Contacta el equipo de gestión del portafolio E&N"
+        Width: =412
+        X: =898
+        Y: =365
+        ZIndex: =10
+
+    Image5 As image:
+        Height: =27
+        Image: ='Recurso 67'
+        Width: =37
+        X: =1263
+        Y: =368
+        ZIndex: =11
+
+    Button1_2 As button:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.Arial
+        FontWeight: =FontWeight.Normal
+        Height: =35
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =ColorFade(RGBA(255, 255, 255, 1), -10%)
+        OnSelect: =Navigate(Screen_CARACTERIZACION)
+        PressedColor: =RGBA(0, 0, 0, 1)
+        RadiusBottomLeft: =18
+        RadiusBottomRight: =18
+        RadiusTopLeft: =18
+        RadiusTopRight: =18
+        Size: =12
+        Text: ="Tutorial de caracterización de servicios E&N"
+        Width: =350
+        X: =929
+        Y: =438
+        ZIndex: =12
+

@@ -1,0 +1,425 @@
+"'Screen_Contact-Web' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCONTACT_CENTER_SERVICE%252fPDF%252fWEB%252fServicio_Claro_Contact_Center_Caracterización_Servicio_WEB.pdf")
+        ;Set(_verBotonBlancoContactweb1,false);Set(_verBotonBlancoContactweb2,true);Set(_verBotonBlancoContactweb3,true);Set(_verBotonBlancoContactweb4,true);Set(_verBotonBlancoContactweb5,true)
+        ;Set(_verBotonRojoContactweb1,true);Set(_verBotonRojoContactweb2,false);Set(_verBotonRojoContactweb3,false);Set(_verBotonRojoContactweb4,false);Set(_verBotonRojoContactweb5,false)
+    Width: =1440
+
+    URL_pdf_42 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =180
+        Size: =14
+        Text: =_URLpdf
+        Width: =189
+        ZIndex: =1
+
+    Rectangle1_51 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =617
+        Width: =189
+        Y: =82
+        ZIndex: =2
+
+    PdfViewer1_40 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_42.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =700
+        ShowControls: =true
+        Width: =1214
+        X: =189
+        ZIndex: =5
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_42 As image:
+        Height: =126
+        Image: =ChicaLogo
+        Width: =183
+        X: =6
+        Y: =4
+        ZIndex: =6
+
+    Image25_42 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =7
+
+    Iconos_navegacion_5 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        Icon5_53 As icon.Home:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =26
+            Icon: =Icon.Home
+            OnSelect: =Navigate(Screen2)
+            Tooltip: ="Inicio"
+            Width: =25
+            X: =1412
+            Y: =70
+            ZIndex: =3
+
+        Icon6_55 As icon.Reset:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =26
+            Icon: =Icon.Reset
+            OnSelect: =Navigate(Screen_CONTACT,ScreenTransition.CoverRight)
+            Tooltip: ="Regresar"
+            Width: =21
+            X: =1412
+            Y: =114
+            ZIndex: =4
+
+        Image10_47 As image:
+            Height: =26
+            Image: =mailbox
+            OnSelect: =Navigate(Contacto)
+            Width: =26
+            X: =1410
+            Y: =154
+            ZIndex: =10
+
+    "'Botones_blancosContact-web' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =19
+
+        Button2_119 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCONTACT_CENTER_SERVICE%252fPDF%252fWEB%252fServicio_Claro_Contact_Center_Caracterización_Servicio_WEB.pdf")
+                ;Set(_verBotonBlancoContactweb1,false);Set(_verBotonBlancoContactweb2,true);Set(_verBotonBlancoContactweb3,true);Set(_verBotonBlancoContactweb4,true);Set(_verBotonBlancoContactweb5,true)
+                ;Set(_verBotonRojoContactweb1,true);Set(_verBotonRojoContactweb2,false);Set(_verBotonRojoContactweb3,false);Set(_verBotonRojoContactweb4,false);Set(_verBotonRojoContactweb5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonBlancoContactweb1
+            Width: =150
+            X: =22
+            Y: =239
+            ZIndex: =11
+
+        Button2_121 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fCONTACT_CENTER_SERVICE%252fPDF%252fWEB%252fServicio_Claro_Contact_Center_Diseño_Tecnico_WEB.pdf")
+                ;Set(_verBotonBlancoContactweb1,true);Set(_verBotonBlancoContactweb2,false);Set(_verBotonBlancoContactweb3,true);Set(_verBotonBlancoContactweb4,true);Set(_verBotonBlancoContactweb5,true)
+                ;Set(_verBotonRojoContactweb1,false);Set(_verBotonRojoContactweb2,true);Set(_verBotonRojoContactweb3,false);Set(_verBotonRojoContactweb4,false);Set(_verBotonRojoContactweb5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonBlancoContactweb2
+            Width: =150
+            X: =22
+            Y: =286
+            ZIndex: =12
+
+        Button2_130 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf")
+                ;Set(_verBotonBlancoContactweb1,true);Set(_verBotonBlancoContactweb2,true);Set(_verBotonBlancoContactweb3,false);Set(_verBotonBlancoContactweb4,true);Set(_verBotonBlancoContactweb5,true)
+                ;Set(_verBotonRojoContactweb1,false);Set(_verBotonRojoContactweb2,false);Set(_verBotonRojoContactweb3,true);Set(_verBotonRojoContactweb4,false);Set(_verBotonRojoContactweb5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestión de Configuración"
+            Visible: =_verBotonBlancoContactweb3
+            Width: =150
+            X: =22
+            Y: =333
+            ZIndex: =13
+
+        Button2_132 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf")
+                ;Set(_verBotonBlancoContactweb1,true);Set(_verBotonBlancoContactweb2,true);Set(_verBotonBlancoContactweb3,true);Set(_verBotonBlancoContactweb4,false);Set(_verBotonBlancoContactweb5,true)
+                ;Set(_verBotonRojoContactweb1,false);Set(_verBotonRojoContactweb2,false);Set(_verBotonRojoContactweb3,false);Set(_verBotonRojoContactweb4,true);Set(_verBotonRojoContactweb5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Operación"
+            Visible: =_verBotonBlancoContactweb4
+            Width: =150
+            X: =22
+            Y: =380
+            ZIndex: =17
+
+        Button2_135 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf")
+                ;Set(_verBotonBlancoContactweb1,true);Set(_verBotonBlancoContactweb2,true);Set(_verBotonBlancoContactweb3,true);Set(_verBotonBlancoContactweb4,true);Set(_verBotonBlancoContactweb5,false)
+                ;Set(_verBotonRojoContactweb1,false);Set(_verBotonRojoContactweb2,false);Set(_verBotonRojoContactweb3,false);Set(_verBotonRojoContactweb4,false);Set(_verBotonRojoContactweb5,true)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonBlancoContactweb5
+            Width: =150
+            X: =22
+            Y: =430
+            ZIndex: =18
+
+    Group2_14 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =20
+
+        Label6_94 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =54
+            Size: =16
+            Text: ="WEB CALL BACK"
+            Width: =163
+            X: =19
+            Y: =150
+            ZIndex: =8
+
+        Label11_17 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(68, 68, 68, 1)
+            Height: =68
+            Size: =23
+            Text: ="CXAAS"
+            Width: =143
+            X: =24
+            Y: =97
+            ZIndex: =9
+
+    "'Botones_RojosContac-web' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        Button2_120 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonRojoContactweb1
+            Width: =150
+            X: =22
+            Y: =239
+            ZIndex: =14
+
+        Button2_129 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonRojoContactweb2
+            Width: =150
+            X: =22
+            Y: =286
+            ZIndex: =15
+
+        Button2_131 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestión de Configuración"
+            Visible: =_verBotonRojoContactweb3
+            Width: =150
+            X: =22
+            Y: =333
+            ZIndex: =16
+
+        Button2_133 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Operación"
+            Visible: =_verBotonRojoContactweb4
+            Width: =150
+            X: =22
+            Y: =380
+            ZIndex: =19
+
+        Button2_136 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonRojoContactweb5
+            Width: =150
+            X: =22
+            Y: =430
+            ZIndex: =20
+

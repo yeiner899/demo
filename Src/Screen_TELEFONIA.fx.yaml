@@ -1,0 +1,329 @@
+Screen_TELEFONIA As screen:
+    Fill: |+
+        =
+        
+    Height: =700
+    OnHidden: =
+    OnVisible: |-
+        =Reset(DD_Telfija);
+        Reset(DD_Telmovil);
+        Set(var_ddTel,0);
+    Width: =1440
+
+    Image21_12 As image:
+        Height: =700
+        Image: =Fondo_3b
+        ImagePosition: =ImagePosition.Fill
+        Width: =866
+        X: =574
+        ZIndex: =1
+
+    Icon5_51 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =30
+        X: =1350
+        Y: =47
+        ZIndex: =4
+
+    Icon6_53 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen2,CoverRight)
+        Tooltip: ="Regresar"
+        Width: =30
+        X: =1350
+        Y: =98
+        ZIndex: =5
+
+    Rectangle1_49 As rectangle:
+        Fill: =RGBA(68, 68, 68, 1)
+        Height: =700
+        Width: =264
+        ZIndex: =8
+
+    Label47_24 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        Size: =39
+        Text: ="GENERAL"
+        Width: =197
+        X: =30
+        Y: =205
+        ZIndex: =9
+
+    Label48_15 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =25
+        Size: =19
+        Text: ="INFORMACIÓN"
+        Width: =216
+        X: =34
+        Y: =179
+        ZIndex: =10
+
+    Label49_12 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =134
+        Italic: =true
+        Size: =14
+        Text: ="""Información sobre plataforma, componentes transversales, diseños técnicos y costos sobre los cuales se prestan los servicios."""
+        Width: =187
+        X: =32
+        Y: =269
+        ZIndex: =11
+
+    Button2_295 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =14
+        Text: ="CONSULTELO AQUÍ"
+        Width: =169
+        X: =47
+        Y: =421
+        ZIndex: =12
+
+    Image22_12 As image:
+        Height: =45
+        Image: ='Recurso 29_1'
+        Width: =46
+        X: =16
+        Y: =404
+        ZIndex: =13
+
+    Image11_15 As image:
+        Height: =54
+        Image: =Recurso_6
+        Width: =145
+        X: =59
+        Y: =20
+        ZIndex: =14
+
+    Image10_45 As image:
+        Height: =33
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =30
+        X: =1350
+        Y: =140
+        ZIndex: =15
+
+    Label9_3 As label:
+        Color: =RGBA(236, 36, 28, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =64
+        Size: =42
+        Text: ="TELEFONÍA"
+        Width: =302
+        X: =400
+        Y: =151
+        ZIndex: =16
+
+    G_Telfija As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        B_Telfija As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddTel,2)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Telefonía Fija"
+            Width: =212
+            X: =1167
+            Y: =320
+            ZIndex: =25
+
+        DD_Telfija As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: |-
+                =Distinct(
+                    Filter(
+                        Lista_familias,
+                        Title = "Telefonía",
+                        ServiciosN1 = "Telefonía Fija"
+                    ),
+                    ServiciosN2
+                )
+            OnChange: |-
+                =UpdateContext({_VarTelefMenu: DD_Telfija.Selected.Result});
+                Switch(
+                    _VarTelefMenu,
+                    "Troncal SIP fija Nacional",
+                    Navigate('Screen_Telefonia-Sipfijan',Cover),
+                    "Lineas 018000",
+                    Navigate(Screen2,Cover)
+                )
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddTel=2,true,
+                    false
+                )
+            Width: =276
+            X: =891
+            Y: =354
+            ZIndex: =26
+
+        Image14_64 As image:
+            Height: =33
+            Image: ='Recurso 34_1'
+            Width: =29
+            X: =1185
+            Y: =350
+            ZIndex: =27
+
+    G_Telmovil As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =43
+
+        B_Telmovil As button:
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddTel,1)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Telefonía Móvil"
+            Width: =210
+            X: =310
+            Y: =382
+            ZIndex: =6
+
+        Image14_65 As image:
+            Height: =28
+            Image: ='Recurso 32_1'
+            Width: =32
+            X: =324
+            Y: =416
+            ZIndex: =7
+
+        DD_Telmovil As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: |-
+                =Distinct(
+                    Filter(
+                        Lista_familias,
+                        Title = "Telefonía",
+                        ServiciosN1 = "Telefonía Móvil"
+                    ),
+                    ServiciosN2
+                )
+            OnChange: |
+                =UpdateContext({_VarINFRAMenu: DD_Telmovil.Selected.Result});
+                Switch(
+                    _VarINFRAMenu,
+                    "Troncal SIP Movil",
+                    Navigate('Screen_Telefonia-Sipmovnal',Cover),
+                    "Hosting",
+                    Navigate('Screen_DataC-Infra-Hosting',Cover),
+                    "Manos Remotas",
+                    Navigate('Screen_DataC-Infra-Manos-Remotas',Cover),
+                    "Puestos de Trabajo",
+                    Navigate('Screen_DataC-Infra-PuestosTrabajo',Cover),
+                    "Respaldo de Información",
+                    Navigate('Screen_DataC-Infra-Respaldo-Informacion',Cover),
+                    "Almacenamiento",
+                    Navigate('Screen_DataC-Infra-Almacenamiento',Cover),
+                    "Custodia de Medios",
+                    Navigate('Screen_DataC-Infra-Custodiamedios',Cover),
+                    "Backend IDC",
+                    Navigate(Screen2,Cover),
+                    "IBM Power",
+                    Navigate(Screen2,Cover)
+                );
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddTel=1,true,
+                    false
+                )
+            Width: =275
+            X: =520
+            Y: =403
+            ZIndex: =17
+

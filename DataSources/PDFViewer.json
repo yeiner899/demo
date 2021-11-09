@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "af7362fe-e2aa-4e6e-8013-b92459ea2ccc",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "PDFViewer",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

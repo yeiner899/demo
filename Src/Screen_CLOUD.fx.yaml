@@ -1,0 +1,494 @@
+Screen_CLOUD As screen:
+    Fill: |+
+        =
+        
+    Height: =700
+    OnHidden: =
+    OnVisible: |-
+        =Set(var_ddcloud,0);
+        Reset('DD_Cloud-Aplicaciones');
+        Reset('DD_Cloud-Presencia-web');
+        Reset('DD_Cloud-Colaboracion');
+        Reset('DD_Cloud-Infraestructura')
+    Width: =1440
+
+    Image21_11 As image:
+        Height: =700
+        Image: =Fondo_3b
+        ImagePosition: =ImagePosition.Fill
+        Width: =866
+        X: =574
+        ZIndex: =1
+
+    Icon5_40 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen2)
+        Tooltip: ="Inicio"
+        Width: =30
+        X: =1350
+        Y: =47
+        ZIndex: =4
+
+    Icon6_42 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =30
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Screen2,CoverRight)
+        Tooltip: ="Regresar"
+        Width: =30
+        X: =1350
+        Y: =98
+        ZIndex: =5
+
+    Rectangle1_38 As rectangle:
+        Fill: =RGBA(68, 68, 68, 1)
+        Height: =700
+        Width: =264
+        ZIndex: =8
+
+    Label47_23 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        Size: =39
+        Text: ="GENERAL"
+        Width: =197
+        X: =30
+        Y: =205
+        ZIndex: =9
+
+    Label48_14 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =25
+        Size: =19
+        Text: ="INFORMACIÓN"
+        Width: =216
+        X: =34
+        Y: =179
+        ZIndex: =10
+
+    Label49_11 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =134
+        Italic: =true
+        Size: =14
+        Text: ="""Información sobre plataforma, componentes transversales, diseños técnicos y costos sobre los cuales se prestan los servicios."""
+        Width: =187
+        X: =32
+        Y: =269
+        ZIndex: =11
+
+    Button2_237 As button:
+        BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(236, 28, 36, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =28
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        PaddingTop: =2
+        PressedBorderColor: =RGBA(255, 255, 255, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+        RadiusBottomLeft: =16
+        RadiusBottomRight: =16
+        RadiusTopLeft: =16
+        RadiusTopRight: =16
+        Size: =14
+        Text: ="CONSULTELO AQUÍ"
+        Width: =169
+        X: =47
+        Y: =421
+        ZIndex: =12
+
+    Image22_11 As image:
+        Height: =45
+        Image: ='Recurso 29_1'
+        Width: =46
+        X: =16
+        Y: =404
+        ZIndex: =13
+
+    Image11_14 As image:
+        Height: =54
+        Image: =Recurso_6
+        Width: =145
+        X: =59
+        Y: =20
+        ZIndex: =14
+
+    Image10_33 As image:
+        Height: =33
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =30
+        X: =1350
+        Y: =140
+        ZIndex: =15
+
+    Label9_2 As label:
+        Color: =RGBA(236, 36, 28, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Semibold
+        Height: =64
+        Size: =42
+        Text: ="CLOUD"
+        Width: =302
+        X: =813
+        Y: =52
+        ZIndex: =16
+
+    "'G_Cloud-Aplicaciones' As group":
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =31
+
+        "'B_Cloud-Aplicaciones' As button":
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddcloud,4)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Aplicaciones"
+            Width: =210
+            X: =1138
+            Y: =439
+            ZIndex: =28
+
+        "'DD_Cloud-Aplicaciones' As dropdown":
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="CLOUD",ServiciosN1="Aplicaciones"),ServiciosN2)
+            OnChange: |+
+                =UpdateContext({_VarAplicaciones: 'DD_Cloud-Aplicaciones'.Selected.Result});
+                Switch(
+                    _VarAplicaciones,
+                    "Cloud Seguridad Empresas",
+                    Navigate(Screen2,Cover),
+                    "Cloud Respaldo en Línea",
+                    Navigate(Screen2,Cover),
+                    "Cloud Aspel",
+                    Navigate(Screen2,Cover),
+                    "AWS OutPost",
+                    Navigate(Screen2,Cover),
+                    "Cloud nube empresarial (Vcloud)",
+                    Navigate(Screen2,Cover),
+                    "OSA (Odin Service Automation)",
+                    Navigate(Screen2,Cover),
+                    "Soporte VCLOUD N2",
+                    Navigate(Screen2,Cover)
+                );
+                
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddcloud=4,true,
+                    false
+                )
+            Width: =275
+            X: =863
+            Y: =463
+            ZIndex: =29
+
+        Image14_59 As image:
+            Height: =33
+            Image: =Recurso_pinones
+            Width: =29
+            X: =1160
+            Y: =459
+            ZIndex: =30
+
+    "'G_Cloud-Colaboracion' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =35
+
+        "'B_Cloud-Colaboracion' As button":
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddcloud,2)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Colaboración"
+            Width: =210
+            X: =374
+            Y: =140
+            ZIndex: =19
+
+        "'DD_Cloud-Colaboracion' As dropdown":
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="CLOUD",ServiciosN1="Colaboración"),ServiciosN2)
+            OnChange: |-
+                =UpdateContext({_VarColoabora: 'DD_Cloud-Colaboracion'.Selected.Result});
+                Switch(
+                    _VarColoabora,
+                    "Cloud Correo Empresas",
+                    Navigate(Screen2,Cover),
+                    "Cloud Conferencia Web Empresas",
+                    Navigate(Screen2,Cover),
+                    "Cloud Office 365",
+                    Navigate(Screen2,Cover),
+                    "Claro Drive Negocios",
+                    Navigate(Screen2,Cover)
+                );
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddcloud=2,true,
+                    false
+                )
+            Width: =275
+            X: =585
+            Y: =166
+            ZIndex: =20
+
+        Image14_55 As image:
+            Height: =28
+            Image: ='Recurso 36_1'
+            Width: =32
+            X: =386
+            Y: =174
+            ZIndex: =21
+
+    "'G_Cloud-Presencia-web' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        "'B_Cloud-Presencia-web' As button":
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddcloud,1)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Presencia Web"
+            Width: =210
+            X: =1088
+            Y: =148
+            ZIndex: =25
+
+        "'DD_Cloud-Presencia-web' As dropdown":
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: =Distinct(Filter(Lista_familias,Title="CLOUD",ServiciosN1="Presencia Web"),ServiciosN2)
+            OnChange: |+
+                =UpdateContext({_VarPresencia: 'DD_Cloud-Presencia-web'.Selected.Result});
+                Switch(
+                    _VarPresencia,
+                    "Soluciones Ecosistemas Digitales",
+                    Navigate(Screen2,Cover),
+                    "Cloud Presencia Web",
+                    Navigate(Screen2,Cover),
+                    "Cloud Dominios",
+                    Navigate(Screen2,Cover)
+                );
+                
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddcloud=1,true,
+                    false
+                )
+            Width: =275
+            X: =813
+            Y: =182
+            ZIndex: =26
+
+        Image14_57 As image:
+            Height: =33
+            Image: ='Recurso 34_1'
+            Width: =29
+            X: =1110
+            Y: =178
+            ZIndex: =27
+
+    "'G_Cloud-Infraestructura' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =43
+
+        "'B_Cloud-Infraestructura' As button":
+            BorderColor: =RGBA(116, 116, 116, 100)
+            BorderThickness: =1
+            Color: =RGBA(116, 116, 116, 1)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =100
+            HoverFill: =RGBA(116, 116, 116, 100)
+            OnSelect: =Set(var_ddcloud,3)
+            PaddingLeft: =40
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(116, 116, 116, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =16
+            Text: ="Infraestructura"
+            Width: =210
+            X: =310
+            Y: =445
+            ZIndex: =6
+
+        Image14_58 As image:
+            Height: =28
+            Image: ='Recurso 32_1'
+            Width: =32
+            X: =324
+            Y: =479
+            ZIndex: =7
+
+        "'DD_Cloud-Infraestructura' As dropdown":
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(116, 116, 116, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(68, 68, 68, 1)
+            ChevronFill: =RGBA(236, 36, 28, 100)
+            ChevronHoverBackground: =ColorFade(RGBA(68, 68, 68, 100), -20%)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Font: =Font.'Open Sans Condensed'
+            Height: =46
+            HoverFill: =RGBA(116, 116, 116, 1)
+            Items: |-
+                =Distinct(
+                    Filter(
+                        Lista_familias,
+                        Title = "Cloud",
+                        ServiciosN1 = "Infraestructura"
+                    ),
+                    ServiciosN2
+                )
+            OnChange: |
+                =UpdateContext({_VarINFRAMenu: 'DD_Cloud-Infraestructura'.Selected.Result});
+                Switch(
+                    _VarINFRAMenu,
+                    "OpenShift",
+                    Navigate('Screen_Cloud-Infra-OpenShift',Cover),
+                    "Cloud Datacenter Virtual",
+                    Navigate(Screen2,Cover),
+                    "Cloud Servidor Virtual  Negocio",
+                    Navigate(Screen2,Cover),
+                    "Cloud Respaldo ServidoresVirtuales",
+                    Navigate(Screen2,Cover),
+                    "Cloud IaaS VPN",
+                    Navigate(Screen2,Cover),
+                    "Clous IaaS VM",
+                    Navigate(Screen2,Cover),
+                    "Cloud Servicios Administrados Nube Publica AZURE",
+                    Navigate(Screen2,Cover),
+                    "Cloud Servicios Administrados Nube Publica  AWS",
+                    Navigate(Screen2,Cover)
+                )
+                ;UpdateContext({_VarINFRAMenu: "None"})
+            PressedFill: =RGBA(68, 68, 68, 1)
+            SelectionFill: =RGBA(116, 116, 116, 1)
+            Size: =16
+            Visible: |-
+                =If(
+                    var_ddcloud=3,true,
+                    false
+                )
+            Width: =275
+            X: =520
+            Y: =466
+            ZIndex: =17
+

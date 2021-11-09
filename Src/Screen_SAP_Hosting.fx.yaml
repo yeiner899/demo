@@ -1,0 +1,426 @@
+"Screen_SAP_Hosting As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fSAP_HOSTING_CARACTERIZACION_SERVICIO.pdf")
+        ;Set(_verBotonBlancoSAPHosting1,false);Set(_verBotonBlancoSAPHosting2,true);Set(_verBotonBlancoSAPHosting3,true);Set(_verBotonBlancoSAPHosting4,true);Set(_verBotonBlancoSAPHosting5,true)
+        ;Set(_verBotonRojoSAPHosting1,true);Set(_verBotonRojoSAPHosting2,false);Set(_verBotonRojoSAPHosting3,false);Set(_verBotonRojoSAPHosting4,false);Set(_verBotonRojoSAPHosting5,false)
+    Width: =1440
+
+    URL_pdf_9 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =180
+        Size: =14
+        Text: =_URLpdf
+        Width: =189
+        ZIndex: =1
+
+    Rectangle1_12 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =617
+        Width: =189
+        Y: =82
+        ZIndex: =2
+
+    PdfViewer1_9 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_9.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =700
+        ShowControls: =true
+        Width: =1214
+        X: =189
+        ZIndex: =5
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_9 As image:
+        Height: =126
+        Image: =ChicaLogo
+        Width: =183
+        X: =6
+        Y: =4
+        ZIndex: =6
+
+    Image25_9 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =7
+
+    Iconos_navegacion As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        Icon5_14 As icon.Home:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =26
+            Icon: =Icon.Home
+            OnSelect: =Navigate(Screen2)
+            Tooltip: ="Inicio"
+            Width: =25
+            X: =1412
+            Y: =70
+            ZIndex: =3
+
+        Icon6_16 As icon.Reset:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =26
+            Icon: =Icon.Reset
+            OnSelect: |-
+                =Set (var_ddSap,0);
+                Navigate(Screen_SAP)
+            Tooltip: ="Regresar"
+            Width: =21
+            X: =1412
+            Y: =114
+            ZIndex: =4
+
+        Image10_7 As image:
+            Height: =26
+            Image: =mailbox
+            OnSelect: =Navigate(Contacto)
+            Width: =26
+            X: =1410
+            Y: =154
+            ZIndex: =10
+
+    Botones_blancos_SAP_Hosting As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =19
+
+        Button2_110 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fSAP_HOSTING_CARACTERIZACION_SERVICIO.pdf")
+                ;Set(_verBotonBlancoSAPHosting1,false);Set(_verBotonBlancoSAPHosting2,true);Set(_verBotonBlancoSAPHosting3,true);Set(_verBotonBlancoSAPHosting4,true);Set(_verBotonBlancoSAPHosting5,true)
+                ;Set(_verBotonRojoSAPHosting1,true);Set(_verBotonRojoSAPHosting2,false);Set(_verBotonRojoSAPHosting3,false);Set(_verBotonRojoSAPHosting4,false);Set(_verBotonRojoSAPHosting5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonBlancoSAPHosting1
+            Width: =150
+            X: =22
+            Y: =219
+            ZIndex: =11
+
+        Button2_113 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fSAP_HOSTING_CATALOGO_TECNICO.pdf")
+                ;Set(_verBotonBlancoSAPHosting1,true);Set(_verBotonBlancoSAPHosting2,false);Set(_verBotonBlancoSAPHosting3,true);Set(_verBotonBlancoSAPHosting4,true);Set(_verBotonBlancoSAPHosting5,true)
+                ;Set(_verBotonRojoSAPHosting1,false);Set(_verBotonRojoSAPHosting2,true);Set(_verBotonRojoSAPHosting3,false);Set(_verBotonRojoSAPHosting4,false);Set(_verBotonRojoSAPHosting5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonBlancoSAPHosting2
+            Width: =150
+            X: =22
+            Y: =266
+            ZIndex: =12
+
+        Button2_115 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fSAP_HOSTING_GESTION_CONFIGURACION.pdf")
+                ;Set(_verBotonBlancoSAPHosting1,true);Set(_verBotonBlancoSAPHosting2,true);Set(_verBotonBlancoSAPHosting3,false);Set(_verBotonBlancoSAPHosting4,true);Set(_verBotonBlancoSAPHosting5,true)
+                ;Set(_verBotonRojoSAPHosting1,false);Set(_verBotonRojoSAPHosting2,false);Set(_verBotonRojoSAPHosting3,true);Set(_verBotonRojoSAPHosting4,false);Set(_verBotonRojoSAPHosting5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestión de Configuración"
+            Visible: =_verBotonBlancoSAPHosting3
+            Width: =150
+            X: =22
+            Y: =313
+            ZIndex: =13
+
+        Button2_122 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fSAP_HOSTING_MODELO_DE_OPERACION.pdf")
+                ;Set(_verBotonBlancoSAPHosting1,true);Set(_verBotonBlancoSAPHosting2,true);Set(_verBotonBlancoSAPHosting3,true);Set(_verBotonBlancoSAPHosting4,false);Set(_verBotonBlancoSAPHosting5,true)
+                ;Set(_verBotonRojoSAPHosting1,false);Set(_verBotonRojoSAPHosting2,false);Set(_verBotonRojoSAPHosting3,false);Set(_verBotonRojoSAPHosting4,true);Set(_verBotonRojoSAPHosting5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Operación"
+            Visible: =_verBotonBlancoSAPHosting4
+            Width: =150
+            X: =22
+            Y: =360
+            ZIndex: =17
+
+        Button2_123 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf")
+                ;Set(_verBotonBlancoSAPHosting1,true);Set(_verBotonBlancoSAPHosting2,true);Set(_verBotonBlancoSAPHosting3,true);Set(_verBotonBlancoSAPHosting4,true);Set(_verBotonBlancoSAPHosting5,false)
+                ;Set(_verBotonRojoSAPHosting1,false);Set(_verBotonRojoSAPHosting2,false);Set(_verBotonRojoSAPHosting3,false);Set(_verBotonRojoSAPHosting4,false);Set(_verBotonRojoSAPHosting5,true)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonBlancoSAPHosting5
+            Width: =150
+            X: =22
+            Y: =410
+            ZIndex: =18
+
+    Group2_9 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =20
+
+        Label6_14 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =34
+            Size: =16
+            Text: ="HOSTING"
+            Width: =163
+            X: =19
+            Y: =140
+            ZIndex: =8
+
+        Label11_12 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(68, 68, 68, 1)
+            Height: =29
+            Size: =23
+            Text: ="SAP"
+            Width: =73
+            X: =61
+            Y: =112
+            ZIndex: =9
+
+    Botones_Rojos_SAP_Hosting As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        Button2_112 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonRojoSAPHosting1
+            Width: =150
+            X: =22
+            Y: =219
+            ZIndex: =14
+
+        Button2_114 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonRojoSAPHosting2
+            Width: =150
+            X: =22
+            Y: =266
+            ZIndex: =15
+
+        Button2_116 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Gestión de Configuración"
+            Visible: =_verBotonRojoSAPHosting3
+            Width: =150
+            X: =22
+            Y: =313
+            ZIndex: =16
+
+        Button2_124 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Operación"
+            Visible: =_verBotonRojoSAPHosting4
+            Width: =150
+            X: =22
+            Y: =360
+            ZIndex: =19
+
+        Button2_125 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonRojoSAPHosting5
+            Width: =150
+            X: =22
+            Y: =410
+            ZIndex: =20
+

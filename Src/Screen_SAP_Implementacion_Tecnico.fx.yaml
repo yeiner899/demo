@@ -1,0 +1,367 @@
+"Screen_SAP_Implementacion_Tecnico As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fIMPLEMENTACION_TECNICA%252fSAP_ImpTec_Caracterizacion_servicio.pdf")
+        ;Set(_verBotonBlanco_SAP_ImpleTecnico1,false);Set(_verBotonBlanco_SAP_ImpleTecnico2,true);Set(_verBotonBlanco_SAP_ImpleTecnico3,true);Set(_verBotonBlanco_SAP_ImpleTecnico4,true);Set(_verBotonBlanco_SAP_ImpleTecnico5,true)
+        ;Set(_verBotonRojo_SAP_ImpleTecnico1,true);Set(_verBotonRojo_SAP_ImpleTecnico2,false);Set(_verBotonRojo_SAP_ImpleTecnico3,false);Set(_verBotonRojo_SAP_ImpleTecnico4,false);Set(_verBotonRojo_SAP_ImpleTecnico5,false)
+    Width: =1440
+
+    URL_pdf_12 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =180
+        Size: =14
+        Text: =_URLpdf
+        Width: =189
+        ZIndex: =1
+
+    Rectangle1_20 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =617
+        Width: =189
+        Y: =82
+        ZIndex: =2
+
+    PdfViewer1_12 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: |-
+            ="https://prod-134.westus.logic.azure.com:443/workflows/c152d5aa8cc442b0a12e6c0252c9704c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=K1EpyfKg74kA0qsk5Dxm4wfU581goBQRnYlq-cmajsw&itemid=" & URL_pdf_12.Text
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =700
+        ShowControls: =true
+        Width: =1214
+        X: =189
+        ZIndex: =8
+        Zoom: |
+            =Zoom.FitWidth
+
+    Image24_12 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =183
+        X: =6
+        Y: =7
+        ZIndex: =9
+
+    Image25_12 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =10
+
+    Iconos_navegacion_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        Icon5_22 As icon.Home:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =26
+            Icon: =Icon.Home
+            OnSelect: =Navigate(Screen2)
+            Tooltip: ="Inicio"
+            Width: =25
+            X: =1412
+            Y: =70
+            ZIndex: =6
+
+        Icon6_24 As icon.Reset:
+            Color: =RGBA(236, 28, 36, 1)
+            Height: =26
+            Icon: =Icon.Reset
+            OnSelect: |-
+                =Set(var_ddSap,0);
+                Navigate(Screen_SAP,CoverRight)
+            Tooltip: ="Regresar"
+            Width: =21
+            X: =1412
+            Y: =114
+            ZIndex: =7
+
+        Image10_15 As image:
+            Height: =26
+            Image: =mailbox
+            OnSelect: =Navigate(Contacto)
+            Width: =26
+            X: =1410
+            Y: =154
+            ZIndex: =16
+
+    botonesRojos_Implementa_Tecnico As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =19
+
+        Button2_151 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonRojo_SAP_ImpleTecnico1
+            Width: =150
+            X: =19
+            Y: =267
+            ZIndex: =13
+
+        Button2_156 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonRojo_SAP_ImpleTecnico2
+            Width: =150
+            X: =19
+            Y: =315
+            ZIndex: =14
+
+        Button2_158 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Operación"
+            Visible: =_verBotonRojo_SAP_ImpleTecnico3
+            Width: =150
+            X: =19
+            Y: =363
+            ZIndex: =15
+
+        Button2_196 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(236, 28, 36, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: =
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonRojo_SAP_ImpleTecnico4
+            Width: =150
+            X: =19
+            Y: =411
+            ZIndex: =17
+
+    Group2_10 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =20
+
+        Label6_20 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Size: =14
+            Text: ="IMPLEMENTACIÓN TÉCNICO"
+            Width: =179
+            X: =10
+            Y: =145
+            ZIndex: =11
+
+        Label11_13 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(68, 68, 68, 1)
+            Height: =29
+            Size: =26
+            Text: ="SAP"
+            Width: =90
+            X: =62
+            Y: =106
+            ZIndex: =12
+
+    botonesBlancos_Implementa_Tecnico As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        Button2_150 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fIMPLEMENTACION_TECNICA%252fSAP_ImpTec_Caracterizacion_servicio.pdf")
+                ;Set(_verBotonBlanco_SAP_ImpleTecnico1,false);Set(_verBotonBlanco_SAP_ImpleTecnico2,true);Set(_verBotonBlanco_SAP_ImpleTecnico3,true);Set(_verBotonBlanco_SAP_ImpleTecnico4,true);Set(_verBotonBlanco_SAP_ImpleTecnico5,true)
+                ;Set(_verBotonRojo_SAP_ImpleTecnico1,true);Set(_verBotonRojo_SAP_ImpleTecnico2,false);Set(_verBotonRojo_SAP_ImpleTecnico3,false);Set(_verBotonRojo_SAP_ImpleTecnico4,false);Set(_verBotonRojo_SAP_ImpleTecnico5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =18
+            RadiusBottomRight: =18
+            RadiusTopLeft: =18
+            RadiusTopRight: =18
+            Size: =11
+            Text: ="Caracterización del Servicio"
+            Visible: =_verBotonBlanco_SAP_ImpleTecnico1
+            Width: =150
+            X: =19
+            Y: =267
+            ZIndex: =3
+
+        Button2_155 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fIMPLEMENTACION_TECNICA%252fSAP_ImpTec_Catalogo_Tecnico.pdf")
+                ;Set(_verBotonBlanco_SAP_ImpleTecnico1,true);Set(_verBotonBlanco_SAP_ImpleTecnico2,false);Set(_verBotonBlanco_SAP_ImpleTecnico3,true);Set(_verBotonBlanco_SAP_ImpleTecnico4,true);Set(_verBotonBlanco_SAP_ImpleTecnico5,true)
+                ;Set(_verBotonRojo_SAP_ImpleTecnico1,false);Set(_verBotonRojo_SAP_ImpleTecnico2,true);Set(_verBotonRojo_SAP_ImpleTecnico3,false);Set(_verBotonRojo_SAP_ImpleTecnico4,false);Set(_verBotonRojo_SAP_ImpleTecnico5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Catálogo Técnico"
+            Visible: =_verBotonBlanco_SAP_ImpleTecnico2
+            Width: =150
+            X: =19
+            Y: =315
+            ZIndex: =4
+
+        Button2_157 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fSAP%252fPDF%252fIMPLEMENTACION_TECNICA%252fSAP_ImpTec_MODELO_OPERACION_v1.pdf")
+                ;Set(_verBotonBlanco_SAP_ImpleTecnico1,true);Set(_verBotonBlanco_SAP_ImpleTecnico2,true);Set(_verBotonBlanco_SAP_ImpleTecnico3,false);Set(_verBotonBlanco_SAP_ImpleTecnico4,true);Set(_verBotonBlanco_SAP_ImpleTecnico5,true)
+                ;Set(_verBotonRojo_SAP_ImpleTecnico1,false);Set(_verBotonRojo_SAP_ImpleTecnico2,false);Set(_verBotonRojo_SAP_ImpleTecnico3,true);Set(_verBotonRojo_SAP_ImpleTecnico4,false);Set(_verBotonRojo_SAP_ImpleTecnico5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Operación"
+            Visible: =_verBotonBlanco_SAP_ImpleTecnico3
+            Width: =150
+            X: =19
+            Y: =363
+            ZIndex: =5
+
+        Button2_198 As button:
+            BorderColor: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(68, 68, 68, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =28
+            HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+            OnSelect: |-
+                =Set(_URLpdf,"Documentos%2bcompartidos%252fPORTAFOLIO_SERVICIOS%252fGENERAL%252fDocumento_Construccion.pdf")
+                ;Set(_verBotonBlanco_SAP_ImpleTecnico1,true);Set(_verBotonBlanco_SAP_ImpleTecnico2,true);Set(_verBotonBlanco_SAP_ImpleTecnico3,true);Set(_verBotonBlanco_SAP_ImpleTecnico4,false);Set(_verBotonBlanco_SAP_ImpleTecnico5,true)
+                ;Set(_verBotonRojo_SAP_ImpleTecnico1,false);Set(_verBotonRojo_SAP_ImpleTecnico2,false);Set(_verBotonRojo_SAP_ImpleTecnico3,false);Set(_verBotonRojo_SAP_ImpleTecnico4,true);Set(_verBotonRojo_SAP_ImpleTecnico5,false)
+            PaddingTop: =2
+            PressedBorderColor: =RGBA(255, 255, 255, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(68, 68, 68, 1), -10%)
+            RadiusBottomLeft: =16
+            RadiusBottomRight: =16
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Size: =11
+            Text: ="Modelo de Costos"
+            Visible: =_verBotonBlanco_SAP_ImpleTecnico4
+            Width: =150
+            X: =19
+            Y: =411
+            ZIndex: =19
+

@@ -1,0 +1,263 @@
+"Screen_CARACTERIZACION As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Height: =700
+    ImagePosition: =
+    OnVisible: |-
+        =Reset(RB_Menu);
+        Reset(DD_Modulo)
+    Width: =1440
+
+    URL_pdf_35 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Size: =14
+        Text: =_URLpdf
+        Width: =184
+        ZIndex: =1
+
+    Rectangle1_43 As rectangle:
+        Fill: =RGBA(76, 76, 76, 1)
+        Height: =621
+        Width: =421
+        Y: =79
+        ZIndex: =2
+
+    Icon5_45 As icon.Home:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Inicio)
+        Tooltip: ="Inicio"
+        Width: =25
+        X: =1412
+        Y: =70
+        ZIndex: =3
+
+    Icon6_47 As icon.Reset:
+        Color: =RGBA(236, 28, 36, 1)
+        Height: =26
+        Icon: =Icon.Reset
+        OnSelect: =Navigate(Inicio,ScreenTransition.CoverRight)
+        Tooltip: ="Regresar"
+        Width: =21
+        X: =1412
+        Y: =114
+        ZIndex: =4
+
+    Image25_35 As image:
+        Height: =68
+        Image: =ClaroEslogan
+        Width: =146
+        X: =16
+        Y: =612
+        ZIndex: =5
+
+    Image10_39 As image:
+        Height: =26
+        Image: =mailbox
+        OnSelect: =Navigate(Contacto)
+        Width: =26
+        X: =1410
+        Y: =154
+        ZIndex: =7
+
+    Label6_81 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =95
+        Size: =15
+        Text: |-
+            ="Conoce cómo se caracteriza un Servicio en el Portafolio:"
+        Width: =310
+        X: =56
+        Y: =84
+        ZIndex: =9
+
+    Label4 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =79
+        Size: =21
+        Text: ="ARTEFACTO DE CARACTERIZACIÓN DE SERVICIOS"
+        Width: =977
+        X: =420
+        ZIndex: =10
+
+    Image24_35 As image:
+        Height: =117
+        Image: =ChicaLogo
+        Width: =178
+        X: =87
+        ZIndex: =11
+
+    DD_Modulo As dropdown:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(68, 68, 68, 1)
+        ChevronDisabledFill: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(236, 36, 28, 1)
+        ChevronHoverBackground: =
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(68, 68, 68, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =38
+        HoverFill: =RGBA(116, 116, 116, 1)
+        Items: |-
+            =Distinct(
+                     Caracterización_PortafolioServicio,
+                     Title
+                
+            )
+        PressedFill: =RGBA(68, 68, 68, 1)
+        SelectionFill: =RGBA(116, 116, 116, 1)
+        Size: =10
+        Width: =310
+        X: =56
+        Y: =353
+        ZIndex: =12
+
+    RB_Menu As radio:
+        Align: =Align.Justify
+        BorderColor: =RGBA(116, 116, 116, 1)
+        BorderThickness: =1
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =163
+        HoverColor: =RGBA(116, 116, 116, 1)
+        Items: |-
+            =Distinct(
+                Filter(
+                    Caracterización_PortafolioServicio,
+                    Title = DD_Modulo.Selected.Result
+                ),
+                Atributo
+            )
+        RadioBorderColor: =RGBA(116, 116, 116, 1)
+        RadioSize: =15
+        Size: =10
+        Width: =310
+        X: =56
+        Y: =414
+        ZIndex: =13
+
+    Label6 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Open Sans Condensed'
+        Height: =178
+        Size: =10
+        Text: |-
+            ="El área de Gestión de Portafolio utiliza como base el documento 'Artefacto de Caracterización de Servicios', con el fin de estructurar de manera homogénea todos los servicios que se ofrecen en el segmento de Empresas y Negocios. Este documento consta de varios módulos que permiten obtener información que va desde aspectos generales hasta detalle técnico. Si deseas conocer cómo se encuentra construido el documento por medio de módulos y atributos, a continuación una breve explicación acerca de su contenido, haz click en cada uno de ellos:"
+        Width: =310
+        X: =56
+        Y: =155
+        ZIndex: =14
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =208
+        Items: |-
+            =Distinct(
+                Filter(
+                    Caracterización_PortafolioServicio,
+                    Title = DD_Modulo.Selected.Result,
+                    Atributo=RB_Menu.Selected.Result
+                ),
+                Descripción
+            )
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =208
+        Width: =889
+        X: =466
+        Y: =230
+        ZIndex: =15
+
+        Image21 As image:
+            Height: =6
+            OnSelect: =Select(Parent)
+            Width: =0
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title2 As label:
+            Align: =Align.Center
+            Font: =Font.'Open Sans Condensed'
+            FontWeight: =FontWeight.Normal
+            Height: =74
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: =ThisItem.Result
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image21.Width - 104
+            X: =52
+            Y: =47
+            ZIndex: =2
+
+        Separator2 As rectangle:
+            BorderColor: =RGBA(68, 68, 68, 1)
+            Fill: =RGBA(68, 68, 68, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Label16 As label:
+        Fill: =RGBA(116, 116, 116, 1)
+        Height: =262
+        Size: =21
+        Text: =
+        Width: =977
+        X: =420
+        Y: =438
+        ZIndex: =16
+
+    Label16_1 As label:
+        Fill: =RGBA(116, 116, 116, 1)
+        Height: =151
+        Size: =21
+        Text: =
+        Width: =977
+        X: =420
+        Y: =79
+        ZIndex: =17
+
+    Label47 As label:
+        Fill: =RGBA(116, 116, 116, 1)
+        Height: =228
+        Size: =21
+        Text: =
+        Width: =44
+        X: =1353
+        Y: =220
+        ZIndex: =18
+
+    Button2 As button:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(116, 116, 116, 1)
+        Font: =Font.'Open Sans Condensed'
+        FontWeight: =FontWeight.Normal
+        Height: =42
+        HoverFill: =ColorFade(RGBA(236, 28, 36, 1), -10%)
+        OnSelect: =Navigate(Screen_CARACTERIZACION_level1,ScreenTransition.Cover)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        Size: =10
+        Text: ="Ver Todo"
+        X: =813
+        Y: =474
+        ZIndex: =19
+
+    Label47_7 As label:
+        Fill: =RGBA(116, 116, 116, 1)
+        Height: =228
+        Size: =21
+        Text: =
+        Width: =45
+        X: =420
+        Y: =220
+        ZIndex: =20
+
