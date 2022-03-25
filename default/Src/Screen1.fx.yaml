@@ -583,3 +583,12 @@
             Y: =TopBar_RightContainer1.Height
             ZIndex: =27
 
+    Label2 As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        PCFTeamsTheme: =TeamsTheme.Default
+        Width: =320
+        X: =572
+        Y: =160
+        ZIndex: =12
+
