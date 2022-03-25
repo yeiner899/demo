@@ -40,7 +40,7 @@
     "TouchTarget_New1": 10
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "03/25/2022 18:34:30",
+  "HeaderLastSavedDateTimeUTC": "03/25/2022 18:35:08",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
@@ -83,7 +83,7 @@
     "IconButton_Edit1": 22,
     "Image1": 12,
     "Label1": 27,
-    "Label2": 0,
+    "Label2": 33,
     "LeftContainer1": 0,
     "LeftControlContainer1": 3,
     "LeftRightDivider1": 14,
