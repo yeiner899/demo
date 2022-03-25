@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "d0669e9f-f74f-4472-a112-1994d3afb7ec",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "PowerApp->Postmessageinachatorchannel",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

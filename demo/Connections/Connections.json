@@ -1,0 +1,66 @@
+{
+  "46c2ecba-bc5b-4d1e-a043-d03f24082938": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/3abcb48f648918ac399f2247a05c1b30-a4355abd7366f573",
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-160.westus.logic.azure.com:443/workflows/9cd22965bb1a44a7ae0287d201c72e4c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=LNx5P4KrAcG39p5TzMfd83ySkeI7GDoM5VQGvWTT-gE",
+      "workflowEndpoint": "/subscriptions/867c59c8-8ae4-4b5e-b8ac-42639cd138f8/resourceGroups/c93cd7b275a6492fbe652d962bbfe660-defaultc93cd7b275a6492fbe652d962bbfe660-env/providers/Microsoft.Logic/workflows/3abcb48f-6489-18ac-399f-2247a05c1b30",
+      "workflowEntityId": "fdcb3994-5fac-ec11-983f-00224828ed19",
+      "workflowName": "3abcb48f-6489-18ac-399f-2247a05c1b30",
+      "workflowPath": "/subscriptions/867c59c8-8ae4-4b5e-b8ac-42639cd138f8/resourceGroups/c93cd7b275a6492fbe652d962bbfe660-defaultc93cd7b275a6492fbe652d962bbfe660-env/providers/Microsoft.Logic/workflows/3abcb48f-6489-18ac-399f-2247a05c1b30"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "f118ed33-5882-4df2-9502-318a0fad0a59": {
+          "value": "shared_teams"
+        },
+        "workflowEntityId": {
+          "value": "fdcb3994-5fac-ec11-983f-00224828ed19"
+        },
+        "workflowName": {
+          "value": "3abcb48f-6489-18ac-399f-2247a05c1b30"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_teams": {
+          "value": "f118ed33-5882-4df2-9502-318a0fad0a59"
+        },
+        "workflowEntityId": {
+          "value": "fdcb3994-5fac-ec11-983f-00224828ed19"
+        },
+        "workflowName": {
+          "value": "3abcb48f-6489-18ac-399f-2247a05c1b30"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerApp->Postmessageinachatorchannel"
+    ],
+    "dependencies": {
+      "shared_teams": "f118ed33-5882-4df2-9502-318a0fad0a59"
+    },
+    "dependents": [],
+    "id": "46c2ecba-bc5b-4d1e-a043-d03f24082938"
+  },
+  "f118ed33-5882-4df2-9502-318a0fad0a59": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_teams/connections/shared-teams-2c64fd4c-d282-4301-a557-a19e-483630bb",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Microsoft Teams",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1554/1.0.1554.2709/teams/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_teams"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "46c2ecba-bc5b-4d1e-a043-d03f24082938"
+    ],
+    "id": "f118ed33-5882-4df2-9502-318a0fad0a59"
+  }
+}
